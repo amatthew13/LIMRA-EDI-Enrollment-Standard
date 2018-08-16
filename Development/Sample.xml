@@ -1,0 +1,336 @@
+<LimraRoot>
+	<!-- Arbitrary security attributes -->
+	<APIKey/>	
+	<!-- 
+		This is a specific partner/benefit tech company.	
+	-->
+	<Audit>
+		<EnrollmentPartnerIdentifier />
+		<EnrollmentPartnerName />				
+		<FileCreationDate />
+		<FileCreationTime />				
+		<FileLayoutVersionIdentifier />
+		<FileTypeCode />
+		<InsuranceCarrierIdentifier />
+		<InsuranceCarrierName />
+		<SystemVersionIdentifier />
+		<TestProductionCode />
+		<TotalRecordsQuantity />
+		<Organisation>
+			<PartyTypeCode/><!-- JB: I think this goes away, its always an employee -->
+			<PartyElectronicAddress>
+				<ElectronicAddressText/>
+				<ElectronicAddressTypeCode/>			
+			</PartyElectronicAddress>
+			<PartyIdentification><!-- JB: I think this goes away -->
+				<IdentificationNumberText/>
+				<IdentificationTypeCode/>			
+			</PartyIdentification>
+			<PartyPhone>
+				<PhoneNumberText/>
+				<PhoneTypeCode/>
+			</PartyPhone>
+			<PartyPostalAddress>
+				<AddressTypeCode/>
+				<CityName/>
+				<CountryCode/>
+				<FirstLineAddress/>
+				<PostalCode/>
+				<SecondLineAddress/>
+				<StateProvinceCode/>
+				<ThirdLineAddress/>
+			</PartyPostalAddress>
+			<PartyRelationship /><!-- JB: I think this goes away -->
+			<FullName/>
+			<OrganizationTypeCode/>
+				
+			<!--
+				Should ProductTypes loop be here? Why is it currently as an employee level?	
+			-->
+			<Persons>
+				<!-- 
+					A party is defined as an organisation or a person yet an organisation and be a beneficiary..
+					How do we populate multiple employees? Is it multiple Party entries?
+					If a party has a person type code of dependent how are they related to another person who is an employee?				
+				-->
+				<Person><!-- Will never be an organisation. 99% Employee at the minute.-->
+					<PartyTypeCode/>
+					<PersonInfo>
+						<BankAccount>
+							<AmericanBankersAssociationRoutingNumber/>
+						</BankAccount>					
+						<PartyElectronicAddress>
+							<ElectronicAddressText/>
+							<ElectronicAddressTypeCode/>			
+						</PartyElectronicAddress>					
+						<PartyIdentification><!-- SSN -->
+							<IdentificationNumberText/>
+							<IdentificationTypeCode/>			
+						</PartyIdentification>			
+						<PartyPhone>
+							<PhoneNumberText/>
+							<PhoneTypeCode/>
+						</PartyPhone>					
+						<PartyPostalAddress>
+							<AddressTypeCode/>
+							<CityName/>
+							<CountryCode/>
+							<FirstLineAddress/>
+							<PostalCode/>
+							<SecondLineAddress/>
+							<StateProvinceCode/>
+							<ThirdLineAddress/>
+						</PartyPostalAddress>
+						<BirthDate/>
+						<DisabilityIndicator/><!-- JB: I think this is specific to the dependents? -->
+						<FirstName></FirstName>
+						<FullName></FullName>
+						<GenderCode></GenderCode>
+						<LastName></LastName>
+						<MaritalStatusCode></MaritalStatusCode>
+						<MiddleName></MiddleName>
+						<PersonTypeCode></PersonTypeCode><!-- JB: I beleive this is redundent here -->
+						<PrefixCode></PrefixCode>
+						<StudentStatusCode></StudentStatusCode>
+						<SuffixCode></SuffixCode>
+					</PersonInfo>
+					<EmploymentInfo>
+						<AdjustedServiceDate/>
+						<EmploymentStatusCode />
+						<EmploymentTypeCode/>
+						<ExemptCode/>
+						<HumanResourcePartnerEmailAddress/>
+						<JobTitleText/>
+						<MostRecentHireDate/>
+						<OccupationText/>
+						<OriginalHireDate/>
+						<PayrollDeductionFrequencyCode/>
+						<PayrollFrequencyQuantity/>
+						<SupervisorEmailAddress/>
+						<SupervisorFullName/>
+						<TerminationReasonCode/>
+						<UnionIndicator/>
+						<UnionLocalName/>
+						<UnionLocalNumber/>
+						<UnionMemberNumber/>
+						<WorkHoursFrequencyCode/>
+						<WorkHoursQuantity/>
+						<WorkLocationText/>						
+						<EmploymentIncomes>
+							<EmploymentIncome>
+								<IncomeAmount/>
+								<IncomeEffectiveDate/>
+								<IncomeModeCode/>
+								<IncomeTypeCode/>
+							</EmploymentIncome>
+						</EmploymentIncomes>
+						<EmploymentIncomeDeductions>
+							<EmploymentIncomeDeduction>
+								<DeductionAmount/>
+								<DeductionTypeCode/>
+								<PayrollDeductionFrequencyCode />							
+							</EmploymentIncomeDeduction>
+						</EmploymentIncomeDeductions>
+					</EmploymentInfo>
+					<Agreements>
+						<Agreement>
+							<AgreementTypeCode></AgreementTypeCode>
+							<PolicyNumber></PolicyNumber><!-- JB: One or multiple policy numbers? -->
+							<ChangeRequests><!-- ChangeRequests: Demographic changes and/or census.  -->
+								<ChangeRequest>
+									<ChangeRequestTypeCode/>
+									<ChangeTransactionDate/>
+								</ChangeRequest>								
+							</ChangeRequests>									
+							<Events><!-- QLES, Enrollment, Employment(Terms). This will not be a child of Agreement, its a sibbling -->										
+								<Event>
+									<EventTypeCode></EventTypeCode>
+									<EventDate></EventDate>		
+									<ComprehensiveHealthBenefitIndicator></ComprehensiveHealthBenefitIndicator><!-- JB: Taken from the enrollment event structure. Review the following elements. -->									
+									<EnrollmentMethodCode></EnrollmentMethodCode>
+									<MedicaidEligibleCode></MedicaidEligibleCode>
+									<MinimumAnnualPayText></MinimumAnnualPayText>
+									<TemporaryDisabilityInsuranceStateCoverageText></TemporaryDisabilityInsuranceStateCoverageText>
+									<WorkersCompensationIndicator></WorkersCompensationIndicator>
+									<BenefitElections>
+										<BenefitElection>
+											<DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber></DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber>
+											<EnrollmentTransactionDate></EnrollmentTransactionDate>
+											<!-- 
+												Why is the plan coverages in a loop under the plan itself.								
+											-->		
+											<BillGroup>		
+												<BillAccountCode/>
+												<BillGroupIdentifier/>
+												<BillSortGroupText />
+												<BenefitPlans>
+													<BenefitPlan>
+														<BenefitPlanIdentifier/>
+														<BenefitClassIdentifier/>
+														<IssueAgeQuantity/>
+														<BenefitElectedAmount/>
+														<BenefitApprovedAmount/>
+														<BenefitTypeCode/>
+														<BenefitEarningsEffectiveDate/>
+														<BenefitEarningsAmount/>
+														<BenefitEarningsModeCode/>
+														<EmployeeContributionCode/>
+														<EmployeePremiumContributionAmount/>
+														<EmployerPremiumContributionAmount/>
+														<TotalPlanPremiumAmount/>
+														<PremiumModeCode/>
+														<!-- 
+															We think that this is rider specific information?
+														-->
+														<ProductTypes>
+															<ProductType>
+																<ProductTypeCode>1</ProductTypeCode>
+																<ProductTypeDescriptionText>Accident</ProductTypeDescriptionText>
+															</ProductType>
+															<ProductType>
+																<ProductTypeCode>7</ProductTypeCode>
+																<ProductTypeDescriptionText>Life</ProductTypeDescriptionText>
+															</ProductType>
+															<ProductType>
+																<ProductTypeCode>10</ProductTypeCode>
+																<ProductTypeDescriptionText>Vision</ProductTypeDescriptionText>
+															</ProductType>
+														</ProductTypes>
+														<!-- 
+															If we're creating universal plan type codes, we can map those at a carrier level without the need to 
+															ask the employee to populate the internal carrier plan codes.														
+														-->
+														<BenefitPlanCoverages>
+															<BenefitPlanCoverage>
+																<PlanCode/>
+																<PlanTypeCode/>
+																<CoverageTierCode/>
+																<OriginalCoverageEffectiveDate/>
+																<CoverageEffectiveDate/>
+																<PreTaxCode/>
+																<TobaccoUseIndicator/>
+																<TakeoverCoverageIndicator/>
+																<!-- 
+																	These are opional loops. Define scenarios.
+																	Denial, Approval, Withdrawl, Complete...EOI
+																-->
+																<UnderwritingDecisions>
+																	<UnderWritingDecision>
+																		<UnderwrittenStatusCode/>
+																		<UnderwrittenAmount/>
+																		<UnderwrittenDecisionDate/>
+																	</UnderWritingDecision>
+																</UnderwritingDecisions>
+																<!-- 
+																	Are these duplications of the beneficiaries under the person?
+																	Employer>Employee>ChangeRequest>Agreement>Event>BenefitElection>BenefitPlan>BenefitPlanCoverage>Beneficiary>
+																-->
+																<Dependents><!-- 56% likely to remain here because ADP have requested the products listed in the dependent loop. -->
+																	<Dependent>													
+																		<PersonInfo>
+																			<BankAccount>
+																				<AmericanBankersAssociationRoutingNumber/>
+																			</BankAccount>					
+																			<PartyElectronicAddress>
+																				<ElectronicAddressText/>
+																				<ElectronicAddressTypeCode/>			
+																			</PartyElectronicAddress>					
+																			<PartyIdentification><!-- SSN -->
+																				<IdentificationNumberText/>
+																				<IdentificationTypeCode/>			
+																			</PartyIdentification>			
+																			<PartyPhone>
+																				<PhoneNumberText/>
+																				<PhoneTypeCode/>
+																			</PartyPhone>					
+																			<PartyPostalAddress>
+																				<AddressTypeCode/>
+																				<CityName/>
+																				<CountryCode/>
+																				<FirstLineAddress/>
+																				<PostalCode/>
+																				<SecondLineAddress/>
+																				<StateProvinceCode/>
+																				<ThirdLineAddress/>
+																			</PartyPostalAddress>
+																			<BirthDate/>
+																			<DisabilityIndicator/><!-- JB: I think this is specific to the dependents? -->
+																			<FirstName></FirstName>
+																			<FullName></FullName>
+																			<GenderCode></GenderCode>
+																			<LastName></LastName>
+																			<MaritalStatusCode></MaritalStatusCode>
+																			<MiddleName></MiddleName>
+																			<PersonTypeCode></PersonTypeCode><!-- JB: I beleive this is redundent here -->
+																			<PrefixCode></PrefixCode>
+																			<StudentStatusCode></StudentStatusCode>
+																			<SuffixCode></SuffixCode>
+																		</PersonInfo>
+																	</Dependent>
+																</Dependents>
+																
+																<Beneficiaries>
+																	<Beneficiary>													
+																		<BeneficiaryTypeCode>1</BeneficiaryTypeCode>
+																		<BeneficiaryPercent/>
+																		<BeneficiaryIndicatorCode/>
+																		<RelationshipCode/>
+																		<BeneficiaryAmount/>
+																		<TrustEstablishmentDate/>
+																		<PersonInfo>
+																			<BankAccount>
+																				<AmericanBankersAssociationRoutingNumber/>
+																			</BankAccount>					
+																			<PartyElectronicAddress>
+																				<ElectronicAddressText/>
+																				<ElectronicAddressTypeCode/>			
+																			</PartyElectronicAddress>					
+																			<PartyIdentification><!-- SSN -->
+																				<IdentificationNumberText/>
+																				<IdentificationTypeCode/>			
+																			</PartyIdentification>			
+																			<PartyPhone>
+																				<PhoneNumberText/>
+																				<PhoneTypeCode/>
+																			</PartyPhone>					
+																			<PartyPostalAddress>
+																				<AddressTypeCode/>
+																				<CityName/>
+																				<CountryCode/>
+																				<FirstLineAddress/>
+																				<PostalCode/>
+																				<SecondLineAddress/>
+																				<StateProvinceCode/>
+																				<ThirdLineAddress/>
+																			</PartyPostalAddress>
+																			<BirthDate/>
+																			<DisabilityIndicator/><!-- JB: I think this is specific to the dependents? -->
+																			<FirstName></FirstName>
+																			<FullName></FullName>
+																			<GenderCode></GenderCode>
+																			<LastName></LastName>
+																			<MaritalStatusCode></MaritalStatusCode>
+																			<MiddleName></MiddleName>
+																			<PersonTypeCode></PersonTypeCode><!-- JB: I beleive this is redundent here -->
+																			<PrefixCode></PrefixCode>
+																			<StudentStatusCode></StudentStatusCode>
+																			<SuffixCode></SuffixCode>
+																		</PersonInfo>
+																	</Beneficiary>
+																</Beneficiaries>
+															</BenefitPlanCoverage>
+														</BenefitPlanCoverages>
+													</BenefitPlan>
+												</BenefitPlans>
+											</BillGroup>
+										</BenefitElection>
+									</BenefitElections>										
+								</Event>
+							</Events>										
+						</Agreement>					
+					</Agreements>
+				</Person>
+			</Persons>
+		</Organisation>
+	</Audit>	
+</LimraRoot>
