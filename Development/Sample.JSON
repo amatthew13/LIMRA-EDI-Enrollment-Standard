@@ -1,0 +1,308 @@
+{
+   "LimraRoot": {
+      "APIKey": "",
+      "Audit": {
+         "EnrollmentPartnerIdentifier": "",
+         "EnrollmentPartnerName": "",
+         "FileCreationDate": "",
+         "FileCreationTime": "",
+         "FileLayoutVersionIdentifier": "",
+         "FileTypeCode": "",
+         "InsuranceCarrierIdentifier": "",
+         "InsuranceCarrierName": "",
+         "SystemVersionIdentifier": "",
+         "TestProductionCode": "",
+         "TotalRecordsQuantity": "",
+         "Organisation": {
+            "PartyTypeCode": "",
+            "PartyElectronicAddress": {
+               "ElectronicAddressText": "",
+               "ElectronicAddressTypeCode": ""
+            },
+            "PartyIdentification": {
+               "IdentificationNumberText": "",
+               "IdentificationTypeCode": ""
+            },
+            "PartyPhone": {
+               "PhoneNumberText": "",
+               "PhoneTypeCode": ""
+            },
+            "PartyPostalAddress": {
+               "AddressTypeCode": "",
+               "CityName": "",
+               "CountryCode": "",
+               "FirstLineAddress": "",
+               "PostalCode": "",
+               "SecondLineAddress": "",
+               "StateProvinceCode": "",
+               "ThirdLineAddress": ""
+            },
+            "PartyRelationship": "",
+            "FullName": "",
+            "OrganizationTypeCode": "",
+            "Persons": {
+               "Person": {
+                  "PartyTypeCode": "",
+                  "PersonInfo": {
+                     "BankAccount": {
+                        "AmericanBankersAssociationRoutingNumber": ""
+                     },
+                     "PartyElectronicAddress": {
+                        "ElectronicAddressText": "",
+                        "ElectronicAddressTypeCode": ""
+                     },
+                     "PartyIdentification": {
+                        "IdentificationNumberText": "",
+                        "IdentificationTypeCode": ""
+                     },
+                     "PartyPhone": {
+                        "PhoneNumberText": "",
+                        "PhoneTypeCode": ""
+                     },
+                     "PartyPostalAddress": {
+                        "AddressTypeCode": "",
+                        "CityName": "",
+                        "CountryCode": "",
+                        "FirstLineAddress": "",
+                        "PostalCode": "",
+                        "SecondLineAddress": "",
+                        "StateProvinceCode": "",
+                        "ThirdLineAddress": ""
+                     },
+                     "BirthDate": "",
+                     "DisabilityIndicator": "",
+                     "FirstName": "",
+                     "FullName": "",
+                     "GenderCode": "",
+                     "LastName": "",
+                     "MaritalStatusCode": "",
+                     "MiddleName": "",
+                     "PersonTypeCode": "",
+                     "PrefixCode": "",
+                     "StudentStatusCode": "",
+                     "SuffixCode": ""
+                  },
+                  "EmploymentInfo": {
+                     "AdjustedServiceDate": "",
+                     "EmploymentStatusCode": "",
+                     "EmploymentTypeCode": "",
+                     "ExemptCode": "",
+                     "HumanResourcePartnerEmailAddress": "",
+                     "JobTitleText": "",
+                     "MostRecentHireDate": "",
+                     "OccupationText": "",
+                     "OriginalHireDate": "",
+                     "PayrollDeductionFrequencyCode": "",
+                     "PayrollFrequencyQuantity": "",
+                     "SupervisorEmailAddress": "",
+                     "SupervisorFullName": "",
+                     "TerminationReasonCode": "",
+                     "UnionIndicator": "",
+                     "UnionLocalName": "",
+                     "UnionLocalNumber": "",
+                     "UnionMemberNumber": "",
+                     "WorkHoursFrequencyCode": "",
+                     "WorkHoursQuantity": "",
+                     "WorkLocationText": "",
+                     "EmploymentIncomes": {
+                        "EmploymentIncome": {
+                           "IncomeAmount": "",
+                           "IncomeEffectiveDate": "",
+                           "IncomeModeCode": "",
+                           "IncomeTypeCode": ""
+                        }
+                     },
+                     "EmploymentIncomeDeductions": {
+                        "EmploymentIncomeDeduction": {
+                           "DeductionAmount": "",
+                           "DeductionTypeCode": "",
+                           "PayrollDeductionFrequencyCode": ""
+                        }
+                     }
+                  },
+                  "Agreements": {
+                     "Agreement": {
+                        "AgreementTypeCode": "",
+                        "PolicyNumber": "",
+                        "ChangeRequests": {
+                           "ChangeRequest": {
+                              "ChangeRequestTypeCode": "",
+                              "ChangeTransactionDate": ""
+                           }
+                        },
+                        "Events": {
+                           "Event": {
+                              "EventTypeCode": "",
+                              "EventDate": "",
+                              "ComprehensiveHealthBenefitIndicator": "",
+                              "EnrollmentMethodCode": "",
+                              "MedicaidEligibleCode": "",
+                              "MinimumAnnualPayText": "",
+                              "TemporaryDisabilityInsuranceStateCoverageText": "",
+                              "WorkersCompensationIndicator": "",
+                              "BenefitElections": {
+                                 "BenefitElection": {
+                                    "DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber": "",
+                                    "EnrollmentTransactionDate": "",
+                                    "BillGroup": {
+                                       "BillAccountCode": "",
+                                       "BillGroupIdentifier": "",
+                                       "BillSortGroupText": "",
+                                       "BenefitPlans": {
+                                          "BenefitPlan": {
+                                             "BenefitPlanIdentifier": "",
+                                             "BenefitClassIdentifier": "",
+                                             "IssueAgeQuantity": "",
+                                             "BenefitElectedAmount": "",
+                                             "BenefitApprovedAmount": "",
+                                             "BenefitTypeCode": "",
+                                             "BenefitEarningsEffectiveDate": "",
+                                             "BenefitEarningsAmount": "",
+                                             "BenefitEarningsModeCode": "",
+                                             "EmployeeContributionCode": "",
+                                             "EmployeePremiumContributionAmount": "",
+                                             "EmployerPremiumContributionAmount": "",
+                                             "TotalPlanPremiumAmount": "",
+                                             "PremiumModeCode": "",
+                                             "ProductTypes": {
+                                                "ProductType": [
+                                                   {
+                                                      "ProductTypeCode": "1",
+                                                      "ProductTypeDescriptionText": "Accident"
+                                                   },
+                                                   {
+                                                      "ProductTypeCode": "7",
+                                                      "ProductTypeDescriptionText": "Life"
+                                                   },
+                                                   {
+                                                      "ProductTypeCode": "10",
+                                                      "ProductTypeDescriptionText": "Vision"
+                                                   }
+                                                ]
+                                             },
+                                             "BenefitPlanCoverages": {
+                                                "BenefitPlanCoverage": {
+                                                   "PlanCode": "",
+                                                   "PlanTypeCode": "",
+                                                   "CoverageTierCode": "",
+                                                   "OriginalCoverageEffectiveDate": "",
+                                                   "CoverageEffectiveDate": "",
+                                                   "PreTaxCode": "",
+                                                   "TobaccoUseIndicator": "",
+                                                   "TakeoverCoverageIndicator": "",
+                                                   "UnderwritingDecisions": {
+                                                      "UnderWritingDecision": {
+                                                         "UnderwrittenStatusCode": "",
+                                                         "UnderwrittenAmount": "",
+                                                         "UnderwrittenDecisionDate": ""
+                                                      }
+                                                   },
+                                                   "Dependents": {
+                                                      "Dependent": {
+                                                         "PersonInfo": {
+                                                            "BankAccount": {
+                                                               "AmericanBankersAssociationRoutingNumber": ""
+                                                            },
+                                                            "PartyElectronicAddress": {
+                                                               "ElectronicAddressText": "",
+                                                               "ElectronicAddressTypeCode": ""
+                                                            },
+                                                            "PartyIdentification": {
+                                                               "IdentificationNumberText": "",
+                                                               "IdentificationTypeCode": ""
+                                                            },
+                                                            "PartyPhone": {
+                                                               "PhoneNumberText": "",
+                                                               "PhoneTypeCode": ""
+                                                            },
+                                                            "PartyPostalAddress": {
+                                                               "AddressTypeCode": "",
+                                                               "CityName": "",
+                                                               "CountryCode": "",
+                                                               "FirstLineAddress": "",
+                                                               "PostalCode": "",
+                                                               "SecondLineAddress": "",
+                                                               "StateProvinceCode": "",
+                                                               "ThirdLineAddress": ""
+                                                            },
+                                                            "BirthDate": "",
+                                                            "DisabilityIndicator": "",
+                                                            "FirstName": "",
+                                                            "FullName": "",
+                                                            "GenderCode": "",
+                                                            "LastName": "",
+                                                            "MaritalStatusCode": "",
+                                                            "MiddleName": "",
+                                                            "PersonTypeCode": "",
+                                                            "PrefixCode": "",
+                                                            "StudentStatusCode": "",
+                                                            "SuffixCode": ""
+                                                         }
+                                                      }
+                                                   },
+                                                   "Beneficiaries": {
+                                                      "Beneficiary": {
+                                                         "BeneficiaryTypeCode": "1",
+                                                         "BeneficiaryPercent": "",
+                                                         "BeneficiaryIndicatorCode": "",
+                                                         "RelationshipCode": "",
+                                                         "BeneficiaryAmount": "",
+                                                         "TrustEstablishmentDate": "",
+                                                         "PersonInfo": {
+                                                            "BankAccount": {
+                                                               "AmericanBankersAssociationRoutingNumber": ""
+                                                            },
+                                                            "PartyElectronicAddress": {
+                                                               "ElectronicAddressText": "",
+                                                               "ElectronicAddressTypeCode": ""
+                                                            },
+                                                            "PartyIdentification": {
+                                                               "IdentificationNumberText": "",
+                                                               "IdentificationTypeCode": ""
+                                                            },
+                                                            "PartyPhone": {
+                                                               "PhoneNumberText": "",
+                                                               "PhoneTypeCode": ""
+                                                            },
+                                                            "PartyPostalAddress": {
+                                                               "AddressTypeCode": "",
+                                                               "CityName": "",
+                                                               "CountryCode": "",
+                                                               "FirstLineAddress": "",
+                                                               "PostalCode": "",
+                                                               "SecondLineAddress": "",
+                                                               "StateProvinceCode": "",
+                                                               "ThirdLineAddress": ""
+                                                            },
+                                                            "BirthDate": "",
+                                                            "DisabilityIndicator": "",
+                                                            "FirstName": "",
+                                                            "FullName": "",
+                                                            "GenderCode": "",
+                                                            "LastName": "",
+                                                            "MaritalStatusCode": "",
+                                                            "MiddleName": "",
+                                                            "PersonTypeCode": "",
+                                                            "PrefixCode": "",
+                                                            "StudentStatusCode": "",
+                                                            "SuffixCode": ""
+                                                         }
+                                                      }
+                                                   }
+                                                }
+                                             }
+                                          }
+                                       }
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
