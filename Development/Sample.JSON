@@ -14,72 +14,124 @@
          "TestProductionCode": "",
          "TotalRecordsQuantity": "",
          "Organisation": {
-            "PartyTypeCode": "",
-            "PartyElectronicAddress": {
-               "ElectronicAddressText": "",
-               "ElectronicAddressTypeCode": ""
-            },
-            "PartyIdentification": {
-               "IdentificationNumberText": "",
-               "IdentificationTypeCode": ""
-            },
-            "PartyPhone": {
-               "PhoneNumberText": "",
-               "PhoneTypeCode": ""
-            },
-            "PartyPostalAddress": {
-               "AddressTypeCode": "",
-               "CityName": "",
-               "CountryCode": "",
-               "FirstLineAddress": "",
-               "PostalCode": "",
-               "SecondLineAddress": "",
-               "StateProvinceCode": "",
-               "ThirdLineAddress": ""
-            },
-            "PartyRelationship": "",
-            "FullName": "",
             "OrganizationTypeCode": "",
+            "FullName": "",
+            "Identification": [
+               {
+                  "IdentificationNumberText": "",
+                  "IdentificationTypeCode": ""
+               }
+            ],
+            "ElectronicAddress": [
+               {
+                  "ElectronicAddressText": "",
+                  "ElectronicAddressTypeCode": ""
+               }
+            ],
+            "Phones": {
+               "Phone": [
+                  {
+                     "PhoneNumberText": "",
+                     "PhoneTypeCode": "1"
+                  },
+                  {
+                     "PhoneNumberText": "",
+                     "PhoneTypeCode": "2"
+                  }
+               ]
+            },
+            "PostalAddress": [
+               {
+                  "AddressTypeCode": "",
+                  "CityName": "",
+                  "CountryCode": "",
+                  "FirstLineAddress": "",
+                  "PostalCode": "",
+                  "SecondLineAddress": "",
+                  "StateProvinceCode": "",
+                  "ThirdLineAddress": ""
+               }
+            ],
             "Persons": {
                "Person": {
-                  "PartyTypeCode": "",
+                  "PersonTypeCode": "",
                   "PersonInfo": {
                      "BankAccount": {
                         "AmericanBankersAssociationRoutingNumber": ""
                      },
-                     "PartyElectronicAddress": {
-                        "ElectronicAddressText": "",
-                        "ElectronicAddressTypeCode": ""
+                     "ElectronicAddresses": {
+                        "ElectronicAddress": [
+                           {
+                              "ElectronicAddressText": "jbrowne@unum.com",
+                              "ElectronicAddressTypeCode": "1"
+                           },
+                           {
+                              "ElectronicAddressText": "jbrowne@unum.com",
+                              "ElectronicAddressTypeCode": "2"
+                           }
+                        ]
                      },
-                     "PartyIdentification": {
-                        "IdentificationNumberText": "",
-                        "IdentificationTypeCode": ""
+                     "PersonIdentifications": {
+                        "Identification": [
+                           {
+                              "IdentificationNumberText": "123-45-6789",
+                              "IdentificationTypeCode": "1"
+                           },
+                           {
+                              "IdentificationNumberText": "123456789",
+                              "IdentificationTypeCode": "6"
+                           }
+                        ]
                      },
-                     "PartyPhone": {
-                        "PhoneNumberText": "",
-                        "PhoneTypeCode": ""
+                     "Phones": {
+                        "Phone": [
+                           {
+                              "PhoneNumberText": "",
+                              "PhoneTypeCode": "1"
+                           },
+                           {
+                              "PhoneNumberText": "",
+                              "PhoneTypeCode": "2"
+                           },
+                           {
+                              "PhoneNumberText": "",
+                              "PhoneTypeCode": "3"
+                           }
+                        ]
                      },
-                     "PartyPostalAddress": {
-                        "AddressTypeCode": "",
-                        "CityName": "",
-                        "CountryCode": "",
-                        "FirstLineAddress": "",
-                        "PostalCode": "",
-                        "SecondLineAddress": "",
-                        "StateProvinceCode": "",
-                        "ThirdLineAddress": ""
+                     "PostalAddresses": {
+                        "PostalAddress": [
+                           {
+                              "AddressTypeCode": "1",
+                              "CityName": "",
+                              "CountryCode": "",
+                              "FirstLineAddress": "",
+                              "PostalCode": "",
+                              "SecondLineAddress": "",
+                              "StateProvinceCode": "",
+                              "ThirdLineAddress": ""
+                           },
+                           {
+                              "AddressTypeCode": "3",
+                              "CityName": "",
+                              "CountryCode": "",
+                              "FirstLineAddress": "",
+                              "PostalCode": "",
+                              "SecondLineAddress": "",
+                              "StateProvinceCode": "",
+                              "ThirdLineAddress": ""
+                           }
+                        ]
                      },
+                     "DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber": "",
                      "BirthDate": "",
-                     "DisabilityIndicator": "",
                      "FirstName": "",
                      "FullName": "",
                      "GenderCode": "",
                      "LastName": "",
                      "MaritalStatusCode": "",
                      "MiddleName": "",
-                     "PersonTypeCode": "",
                      "PrefixCode": "",
-                     "StudentStatusCode": "",
                      "SuffixCode": ""
                   },
                   "EmploymentInfo": {
@@ -105,188 +157,236 @@
                      "WorkHoursQuantity": "",
                      "WorkLocationText": "",
                      "EmploymentIncomes": {
-                        "EmploymentIncome": {
-                           "IncomeAmount": "",
-                           "IncomeEffectiveDate": "",
-                           "IncomeModeCode": "",
-                           "IncomeTypeCode": ""
-                        }
+                        "EmploymentIncome": [
+                           {
+                              "IncomeAmount": "",
+                              "IncomeEffectiveDate": "",
+                              "IncomeModeCode": "",
+                              "IncomeTypeCode": ""
+                           },
+                           {
+                              "IncomeAmount": "",
+                              "IncomeEffectiveDate": "",
+                              "IncomeModeCode": "",
+                              "IncomeTypeCode": ""
+                           }
+                        ]
                      },
                      "EmploymentIncomeDeductions": {
-                        "EmploymentIncomeDeduction": {
-                           "DeductionAmount": "",
-                           "DeductionTypeCode": "",
-                           "PayrollDeductionFrequencyCode": ""
-                        }
+                        "EmploymentIncomeDeduction": [
+                           {
+                              "DeductionAmount": "",
+                              "DeductionTypeCode": "",
+                              "PayrollDeductionFrequencyCode": ""
+                           },
+                           {
+                              "DeductionAmount": "",
+                              "DeductionTypeCode": "",
+                              "PayrollDeductionFrequencyCode": ""
+                           }
+                        ]
                      }
                   },
-                  "Agreements": {
-                     "Agreement": {
-                        "AgreementTypeCode": "",
-                        "PolicyNumber": "",
-                        "ChangeRequests": {
-                           "ChangeRequest": {
-                              "ChangeRequestTypeCode": "",
-                              "ChangeTransactionDate": ""
-                           }
-                        },
-                        "Events": {
-                           "Event": {
-                              "EventTypeCode": "",
-                              "EventDate": "",
-                              "ComprehensiveHealthBenefitIndicator": "",
-                              "EnrollmentMethodCode": "",
-                              "MedicaidEligibleCode": "",
-                              "MinimumAnnualPayText": "",
-                              "TemporaryDisabilityInsuranceStateCoverageText": "",
-                              "WorkersCompensationIndicator": "",
-                              "BenefitElections": {
-                                 "BenefitElection": {
-                                    "DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber": "",
-                                    "EnrollmentTransactionDate": "",
-                                    "BillGroup": {
-                                       "BillAccountCode": "",
-                                       "BillGroupIdentifier": "",
-                                       "BillSortGroupText": "",
-                                       "BenefitPlans": {
-                                          "BenefitPlan": {
-                                             "BenefitPlanIdentifier": "",
-                                             "BenefitClassIdentifier": "",
-                                             "IssueAgeQuantity": "",
-                                             "BenefitElectedAmount": "",
-                                             "BenefitApprovedAmount": "",
-                                             "BenefitTypeCode": "",
-                                             "BenefitEarningsEffectiveDate": "",
-                                             "BenefitEarningsAmount": "",
-                                             "BenefitEarningsModeCode": "",
-                                             "EmployeeContributionCode": "",
-                                             "EmployeePremiumContributionAmount": "",
-                                             "EmployerPremiumContributionAmount": "",
-                                             "TotalPlanPremiumAmount": "",
-                                             "PremiumModeCode": "",
-                                             "ProductTypes": {
-                                                "ProductType": [
-                                                   {
-                                                      "ProductTypeCode": "1",
-                                                      "ProductTypeDescriptionText": "Accident"
-                                                   },
-                                                   {
-                                                      "ProductTypeCode": "7",
-                                                      "ProductTypeDescriptionText": "Life"
-                                                   },
-                                                   {
-                                                      "ProductTypeCode": "10",
-                                                      "ProductTypeDescriptionText": "Vision"
+                  "Events": {
+                     "Event": {
+                        "EventTypeCode": "",
+                        "EventDate": "",
+                        "TransactionDate": "",
+                        "ComprehensiveHealthBenefitIndicator": "",
+                        "EnrollmentMethodCode": "",
+                        "MedicaidEligibleCode": "",
+                        "MinimumAnnualPayText": "",
+                        "TemporaryDisabilityInsuranceStateCoverageText": "",
+                        "WorkersCompensationIndicator": "",
+                        "Agreements": {
+                           "Agreement": {
+                              "AgreementTypeCode": "",
+                              "PolicyNumber": "123456",
+                              "BillGroups": {
+                                 "BillGroup": {
+                                    "BillAccountCode": "0001",
+                                    "BillGroupIdentifier": "",
+                                    "BillSortGroupCode": "0100",
+                                    "BenefitPlans": {
+                                       "BenefitPlan": {
+                                          "BenefitPlanIdentifier": "OA",
+                                          "ProductType": {
+                                             "ProductTypeCode": "5",
+                                             "ProductTypeDescriptionText": "Dental"
+                                          },
+                                          "BenefitClassIdentifier": "",
+                                          "IssueAgeQuantity": "",
+                                          "BenefitElectedAmount": "",
+                                          "BenefitApprovedAmount": "",
+                                          "BenefitTypeCode": "",
+                                          "BenefitEarningsEffectiveDate": "",
+                                          "BenefitEarningsAmount": "",
+                                          "BenefitEarningsModeCode": "",
+                                          "EmployeeContributionCode": "",
+                                          "EmployeePremiumContributionAmount": "",
+                                          "EmployerPremiumContributionAmount": "",
+                                          "TotalPlanPremiumAmount": "",
+                                          "PremiumModeCode": "",
+                                          "BenefitPlanCoverages": {
+                                             "BenefitPlanCoverage": {
+                                                "PlanCode": "DENTF1",
+                                                "PlanTypeCode": "DENT",
+                                                "CoverageTierCode": "5",
+                                                "OriginalCoverageEffectiveDate": "",
+                                                "CoverageEffectiveDate": "",
+                                                "PreTaxCode": "",
+                                                "TobaccoUseIndicator": "",
+                                                "TakeoverCoverageIndicator": "",
+                                                "UnderwritingDecisions": {
+                                                   "UnderWritingDecision": {
+                                                      "UnderwrittenStatusCode": "",
+                                                      "UnderwrittenAmount": "",
+                                                      "UnderwrittenDecisionDate": ""
                                                    }
-                                                ]
-                                             },
-                                             "BenefitPlanCoverages": {
-                                                "BenefitPlanCoverage": {
-                                                   "PlanCode": "",
-                                                   "PlanTypeCode": "",
-                                                   "CoverageTierCode": "",
-                                                   "OriginalCoverageEffectiveDate": "",
-                                                   "CoverageEffectiveDate": "",
-                                                   "PreTaxCode": "",
-                                                   "TobaccoUseIndicator": "",
-                                                   "TakeoverCoverageIndicator": "",
-                                                   "UnderwritingDecisions": {
-                                                      "UnderWritingDecision": {
-                                                         "UnderwrittenStatusCode": "",
-                                                         "UnderwrittenAmount": "",
-                                                         "UnderwrittenDecisionDate": ""
+                                                },
+                                                "Dependents": {
+                                                   "Dependent": {
+                                                      "PersonInfo": {
+                                                         "BankAccount": {
+                                                            "AmericanBankersAssociationRoutingNumber": ""
+                                                         },
+                                                         "ElectronicAddresses": {
+                                                            "ElectronicAddress": [
+                                                               {
+                                                                  "ElectronicAddressText": "jbrowne@unum.com",
+                                                                  "ElectronicAddressTypeCode": "1"
+                                                               }
+                                                            ]
+                                                         },
+                                                         "PersonIdentifications": {
+                                                            "Identification": [
+                                                               {
+                                                                  "IdentificationNumberText": "123-45-6789",
+                                                                  "IdentificationTypeCode": "1"
+                                                               },
+                                                               {
+                                                                  "IdentificationNumberText": "123456789",
+                                                                  "IdentificationTypeCode": "7"
+                                                               }
+                                                            ]
+                                                         },
+                                                         "Phones": {
+                                                            "Phone": [
+                                                               {
+                                                                  "PhoneNumberText": "",
+                                                                  "PhoneTypeCode": "1"
+                                                               },
+                                                               {
+                                                                  "PhoneNumberText": "",
+                                                                  "PhoneTypeCode": "2"
+                                                               },
+                                                               {
+                                                                  "PhoneNumberText": "",
+                                                                  "PhoneTypeCode": "3"
+                                                               }
+                                                            ]
+                                                         },
+                                                         "PostalAddresses": {
+                                                            "PostalAddress": [
+                                                               {
+                                                                  "AddressTypeCode": "1",
+                                                                  "CityName": "",
+                                                                  "CountryCode": "",
+                                                                  "FirstLineAddress": "",
+                                                                  "PostalCode": "",
+                                                                  "SecondLineAddress": "",
+                                                                  "StateProvinceCode": "",
+                                                                  "ThirdLineAddress": ""
+                                                               },
+                                                               {
+                                                                  "AddressTypeCode": "3",
+                                                                  "CityName": "",
+                                                                  "CountryCode": "",
+                                                                  "FirstLineAddress": "",
+                                                                  "PostalCode": "",
+                                                                  "SecondLineAddress": "",
+                                                                  "StateProvinceCode": "",
+                                                                  "ThirdLineAddress": ""
+                                                               }
+                                                            ]
+                                                         },
+                                                         "DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber": "",
+                                                         "BirthDate": "",
+                                                         "DisabilityIndicator": "",
+                                                         "FirstName": "",
+                                                         "MiddleName": "",
+                                                         "GenderCode": "",
+                                                         "LastName": "",
+                                                         "PrefixCode": "",
+                                                         "StudentStatusCode": "",
+                                                         "SuffixCode": "",
+                                                         "RelationshipTypeCode": ""
                                                       }
-                                                   },
-                                                   "Dependents": {
-                                                      "Dependent": {
-                                                         "PersonInfo": {
-                                                            "BankAccount": {
-                                                               "AmericanBankersAssociationRoutingNumber": ""
-                                                            },
-                                                            "PartyElectronicAddress": {
-                                                               "ElectronicAddressText": "",
-                                                               "ElectronicAddressTypeCode": ""
-                                                            },
-                                                            "PartyIdentification": {
-                                                               "IdentificationNumberText": "",
-                                                               "IdentificationTypeCode": ""
-                                                            },
-                                                            "PartyPhone": {
-                                                               "PhoneNumberText": "",
-                                                               "PhoneTypeCode": ""
-                                                            },
-                                                            "PartyPostalAddress": {
-                                                               "AddressTypeCode": "",
-                                                               "CityName": "",
-                                                               "CountryCode": "",
-                                                               "FirstLineAddress": "",
-                                                               "PostalCode": "",
-                                                               "SecondLineAddress": "",
-                                                               "StateProvinceCode": "",
-                                                               "ThirdLineAddress": ""
-                                                            },
-                                                            "BirthDate": "",
-                                                            "DisabilityIndicator": "",
-                                                            "FirstName": "",
-                                                            "FullName": "",
-                                                            "GenderCode": "",
-                                                            "LastName": "",
-                                                            "MaritalStatusCode": "",
-                                                            "MiddleName": "",
-                                                            "PersonTypeCode": "",
-                                                            "PrefixCode": "",
-                                                            "StudentStatusCode": "",
-                                                            "SuffixCode": ""
-                                                         }
-                                                      }
-                                                   },
-                                                   "Beneficiaries": {
-                                                      "Beneficiary": {
-                                                         "BeneficiaryTypeCode": "1",
-                                                         "BeneficiaryPercent": "",
-                                                         "BeneficiaryIndicatorCode": "",
-                                                         "RelationshipCode": "",
-                                                         "BeneficiaryAmount": "",
-                                                         "TrustEstablishmentDate": "",
-                                                         "PersonInfo": {
-                                                            "BankAccount": {
-                                                               "AmericanBankersAssociationRoutingNumber": ""
-                                                            },
-                                                            "PartyElectronicAddress": {
-                                                               "ElectronicAddressText": "",
-                                                               "ElectronicAddressTypeCode": ""
-                                                            },
-                                                            "PartyIdentification": {
-                                                               "IdentificationNumberText": "",
-                                                               "IdentificationTypeCode": ""
-                                                            },
-                                                            "PartyPhone": {
-                                                               "PhoneNumberText": "",
-                                                               "PhoneTypeCode": ""
-                                                            },
-                                                            "PartyPostalAddress": {
-                                                               "AddressTypeCode": "",
-                                                               "CityName": "",
-                                                               "CountryCode": "",
-                                                               "FirstLineAddress": "",
-                                                               "PostalCode": "",
-                                                               "SecondLineAddress": "",
-                                                               "StateProvinceCode": "",
-                                                               "ThirdLineAddress": ""
-                                                            },
-                                                            "BirthDate": "",
-                                                            "DisabilityIndicator": "",
-                                                            "FirstName": "",
-                                                            "FullName": "",
-                                                            "GenderCode": "",
-                                                            "LastName": "",
-                                                            "MaritalStatusCode": "",
-                                                            "MiddleName": "",
-                                                            "PersonTypeCode": "",
-                                                            "PrefixCode": "",
-                                                            "StudentStatusCode": "",
-                                                            "SuffixCode": ""
-                                                         }
+                                                   }
+                                                },
+                                                "Beneficiaries": {
+                                                   "Beneficiary": {
+                                                      "BeneficiaryTypeCode": "1",
+                                                      "BeneficiaryPercent": "",
+                                                      "BeneficiaryIndicatorCode": "",
+                                                      "RelationshipCode": "",
+                                                      "BeneficiaryAmount": "",
+                                                      "TrustEstablishmentDate": "",
+                                                      "PersonInfo": {
+                                                         "BankAccount": {
+                                                            "AmericanBankersAssociationRoutingNumber": ""
+                                                         },
+                                                         "ElectronicAddresses": {
+                                                            "ElectronicAddress": [
+                                                               {
+                                                                  "ElectronicAddressText": "jbrowne@unum.com",
+                                                                  "ElectronicAddressTypeCode": "1"
+                                                               }
+                                                            ]
+                                                         },
+                                                         "PersonIdentifications": {
+                                                            "Identification": [
+                                                               {
+                                                                  "IdentificationNumberText": "123-45-6789",
+                                                                  "IdentificationTypeCode": "1"
+                                                               }
+                                                            ]
+                                                         },
+                                                         "Phones": {
+                                                            "Phone": [
+                                                               {
+                                                                  "PhoneNumberText": "",
+                                                                  "PhoneTypeCode": "1"
+                                                               },
+                                                               {
+                                                                  "PhoneNumberText": "",
+                                                                  "PhoneTypeCode": "2"
+                                                               },
+                                                               {
+                                                                  "PhoneNumberText": "",
+                                                                  "PhoneTypeCode": "3"
+                                                               }
+                                                            ]
+                                                         },
+                                                         "PostalAddresses": {
+                                                            "PostalAddress": [
+                                                               {
+                                                                  "AddressTypeCode": "1",
+                                                                  "CityName": "",
+                                                                  "CountryCode": "",
+                                                                  "FirstLineAddress": "",
+                                                                  "PostalCode": "",
+                                                                  "SecondLineAddress": "",
+                                                                  "StateProvinceCode": "",
+                                                                  "ThirdLineAddress": ""
+                                                               }
+                                                            ]
+                                                         },
+                                                         "BirthDate": "",
+                                                         "FirstName": "",
+                                                         "FullName": "",
+                                                         "LastName": "",
+                                                         "MiddleName": ""
                                                       }
                                                    }
                                                 }

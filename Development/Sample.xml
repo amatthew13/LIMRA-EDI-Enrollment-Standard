@@ -16,21 +16,34 @@
 		<SystemVersionIdentifier />
 		<TestProductionCode />
 		<TotalRecordsQuantity />
-		<Organisation>
-			<PartyTypeCode/><!-- JB: I think this goes away, its always an employee -->
-			<PartyElectronicAddress>
+		<!-- Organisation always represents the employer. (Plan Sponsor). 
+			The standard is for work place benefits; so even if there is individual products we're expecting an employer to be present.
+		-->
+		<Organisation><!-- JB: Should be called Employer-->
+			<!-- Indicates the specific organization tied to the record. 1-Employer,2-Beneficiary. James protests  -->
+			<OrganizationTypeCode></OrganizationTypeCode>
+			<FullName/>
+			<Identification><!-- Unique identifier and description for an Organisation. -->
+				<IdentificationNumberText/>
+				<IdentificationTypeCode/><!-- Valid values are: 4-Federal Tax ID & 5-Group Assigned Number -->			
+			</Identification>
+			
+			<ElectronicAddress>
 				<ElectronicAddressText/>
 				<ElectronicAddressTypeCode/>			
-			</PartyElectronicAddress>
-			<PartyIdentification><!-- JB: I think this goes away -->
-				<IdentificationNumberText/>
-				<IdentificationTypeCode/>			
-			</PartyIdentification>
-			<PartyPhone>
-				<PhoneNumberText/>
-				<PhoneTypeCode/>
-			</PartyPhone>
-			<PartyPostalAddress>
+			</ElectronicAddress>
+			<!-- Phones: Optional. Valid values for an organisation are 1 & 2 -->
+			<Phones>
+				<Phone>
+					<PhoneNumberText/>
+					<PhoneTypeCode>1</PhoneTypeCode>
+				</Phone>
+				<Phone>
+					<PhoneNumberText/>
+					<PhoneTypeCode>2</PhoneTypeCode><!--1-mobile,2-work,3-home -->
+				</Phone>
+			</Phones>
+			<PostalAddress>
 				<AddressTypeCode/>
 				<CityName/>
 				<CountryCode/>
@@ -39,59 +52,87 @@
 				<SecondLineAddress/>
 				<StateProvinceCode/>
 				<ThirdLineAddress/>
-			</PartyPostalAddress>
-			<PartyRelationship /><!-- JB: I think this goes away -->
-			<FullName/>
-			<OrganizationTypeCode/>
-				
+			</PostalAddress>
+							
 			<!--
 				Should ProductTypes loop be here? Why is it currently as an employee level?	
 			-->
-			<Persons>
-				<!-- 
-					A party is defined as an organisation or a person yet an organisation and be a beneficiary..
-					How do we populate multiple employees? Is it multiple Party entries?
-					If a party has a person type code of dependent how are they related to another person who is an employee?				
-				-->
-				<Person><!-- Will never be an organisation. 99% Employee at the minute.-->
-					<PartyTypeCode/>
+			<Persons><!-- JB: Should be Employees. Prove me wrong :)-->
+				<Person><!-- JB: Should be Employee? Will never be an organisation. 99% Employee at the minute.-->
+					<PersonTypeCode/><!-- JB: Should go away if it is an Employee, which it should.. 1-Employee,2-Dependent,3-Beneficiary,4-Enroller. Enroller should be at an agreement level? -->
 					<PersonInfo>
+						<!-- We beleive this is specific to claims -->
 						<BankAccount>
 							<AmericanBankersAssociationRoutingNumber/>
-						</BankAccount>					
-						<PartyElectronicAddress>
-							<ElectronicAddressText/>
-							<ElectronicAddressTypeCode/>			
-						</PartyElectronicAddress>					
-						<PartyIdentification><!-- SSN -->
-							<IdentificationNumberText/>
-							<IdentificationTypeCode/>			
-						</PartyIdentification>			
-						<PartyPhone>
-							<PhoneNumberText/>
-							<PhoneTypeCode/>
-						</PartyPhone>					
-						<PartyPostalAddress>
-							<AddressTypeCode/>
-							<CityName/>
-							<CountryCode/>
-							<FirstLineAddress/>
-							<PostalCode/>
-							<SecondLineAddress/>
-							<StateProvinceCode/>
-							<ThirdLineAddress/>
-						</PartyPostalAddress>
+						</BankAccount>
+						<ElectronicAddresses>
+							<ElectronicAddress>
+								<ElectronicAddressText>jbrowne@unum.com</ElectronicAddressText>
+								<ElectronicAddressTypeCode>1</ElectronicAddressTypeCode>			
+							</ElectronicAddress>		
+							<ElectronicAddress>
+								<ElectronicAddressText>jbrowne@unum.com</ElectronicAddressText>
+								<ElectronicAddressTypeCode>2</ElectronicAddressTypeCode>			
+							</ElectronicAddress>
+						</ElectronicAddresses>
+						<!-- Identification: Section to uniquely identify a person-->
+						<PersonIdentifications>
+							<Identification>
+								<IdentificationNumberText>123-45-6789</IdentificationNumberText> <!-- -->
+								<IdentificationTypeCode>1</IdentificationTypeCode>	<!-- IdentificationTypeCode: 1-SSN,2-SIN,6-EmployeeID (at an employee level) -->		
+							</Identification>
+							<Identification>
+								<IdentificationNumberText>123456789</IdentificationNumberText> <!-- -->
+								<IdentificationTypeCode>6</IdentificationTypeCode>	<!-- IdentificationTypeCode: 1-SSN,2-SIN,6-EmployeeID (at an employee level) -->		
+							</Identification>
+						</PersonIdentifications>
+						<!-- Phones: All 3 are optional. -->
+						<Phones>
+							<Phone>
+								<PhoneNumberText/>
+								<PhoneTypeCode>1</PhoneTypeCode>
+							</Phone>
+							<Phone>
+								<PhoneNumberText/>
+								<PhoneTypeCode>2</PhoneTypeCode><!--1-mobile,2-work,3-home -->
+							</Phone>
+							<Phone>
+								<PhoneNumberText/>
+								<PhoneTypeCode>3</PhoneTypeCode><!--1-mobile,2-work,3-home -->
+							</Phone>
+						</Phones>	
+						<!-- PostalAddresses: 2-Home, 1-mailing, 3-work, 3 is required for Employees -->
+						<PostalAddresses>
+							<PostalAddress>
+								<AddressTypeCode>1</AddressTypeCode>
+								<CityName/>
+								<CountryCode/>
+								<FirstLineAddress/>
+								<PostalCode/>
+								<SecondLineAddress/>
+								<StateProvinceCode/>
+								<ThirdLineAddress/>
+							</PostalAddress>
+							<PostalAddress>
+								<AddressTypeCode>3</AddressTypeCode>
+								<CityName/>
+								<CountryCode/>
+								<FirstLineAddress/>
+								<PostalCode/>
+								<SecondLineAddress/>
+								<StateProvinceCode/>
+								<ThirdLineAddress/>
+							</PostalAddress>
+						</PostalAddresses>
+						<DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber></DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber>
 						<BirthDate/>
-						<DisabilityIndicator/><!-- JB: I think this is specific to the dependents? -->
 						<FirstName></FirstName>
 						<FullName></FullName>
 						<GenderCode></GenderCode>
 						<LastName></LastName>
 						<MaritalStatusCode></MaritalStatusCode>
 						<MiddleName></MiddleName>
-						<PersonTypeCode></PersonTypeCode><!-- JB: I beleive this is redundent here -->
 						<PrefixCode></PrefixCode>
-						<StudentStatusCode></StudentStatusCode>
 						<SuffixCode></SuffixCode>
 					</PersonInfo>
 					<EmploymentInfo>
@@ -123,6 +164,12 @@
 								<IncomeModeCode/>
 								<IncomeTypeCode/>
 							</EmploymentIncome>
+							<EmploymentIncome>
+								<IncomeAmount/>
+								<IncomeEffectiveDate/>
+								<IncomeModeCode/>
+								<IncomeTypeCode/>
+							</EmploymentIncome>
 						</EmploymentIncomes>
 						<EmploymentIncomeDeductions>
 							<EmploymentIncomeDeduction>
@@ -130,121 +177,174 @@
 								<DeductionTypeCode/>
 								<PayrollDeductionFrequencyCode />							
 							</EmploymentIncomeDeduction>
+							<EmploymentIncomeDeduction>
+								<DeductionAmount/>
+								<DeductionTypeCode/>
+								<PayrollDeductionFrequencyCode />							
+							</EmploymentIncomeDeduction>
 						</EmploymentIncomeDeductions>
 					</EmploymentInfo>
-					<Agreements>
-						<Agreement>
-							<AgreementTypeCode></AgreementTypeCode>
-							<PolicyNumber></PolicyNumber><!-- JB: One or multiple policy numbers? -->
-							<ChangeRequests><!-- ChangeRequests: Demographic changes and/or census.  -->
-								<ChangeRequest>
-									<ChangeRequestTypeCode/>
-									<ChangeTransactionDate/>
-								</ChangeRequest>								
-							</ChangeRequests>									
-							<Events><!-- QLES, Enrollment, Employment(Terms). This will not be a child of Agreement, its a sibbling -->										
-								<Event>
-									<EventTypeCode></EventTypeCode>
-									<EventDate></EventDate>		
-									<ComprehensiveHealthBenefitIndicator></ComprehensiveHealthBenefitIndicator><!-- JB: Taken from the enrollment event structure. Review the following elements. -->									
-									<EnrollmentMethodCode></EnrollmentMethodCode>
-									<MedicaidEligibleCode></MedicaidEligibleCode>
-									<MinimumAnnualPayText></MinimumAnnualPayText>
-									<TemporaryDisabilityInsuranceStateCoverageText></TemporaryDisabilityInsuranceStateCoverageText>
-									<WorkersCompensationIndicator></WorkersCompensationIndicator>
-									<BenefitElections>
-										<BenefitElection>
-											<DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber></DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber>
-											<EnrollmentTransactionDate></EnrollmentTransactionDate>
+					
+					<Events><!-- QLES, Enrollment, Employment(Terms). -->										
+						<Event>
+							<EventTypeCode></EventTypeCode>
+							<EventDate></EventDate>		
+							<TransactionDate></TransactionDate>	
+							<ComprehensiveHealthBenefitIndicator></ComprehensiveHealthBenefitIndicator><!-- JB: Taken from the enrollment event structure. Review the following elements. -->									
+							<EnrollmentMethodCode></EnrollmentMethodCode>
+							<MedicaidEligibleCode></MedicaidEligibleCode>
+							<MinimumAnnualPayText></MinimumAnnualPayText>
+							<TemporaryDisabilityInsuranceStateCoverageText></TemporaryDisabilityInsuranceStateCoverageText>
+							<WorkersCompensationIndicator></WorkersCompensationIndicator>
+							<!-- 
+								1-Group Policy (Insurance contract between carrier and employer), 
+								2-Group Agreement (Set of sponsored benefits that the employer agreed the carrier can offer their employees)
+								3-Individual Policy (Insurance contract between the carrier and the employee)
+								4-Individual Agreement (Set of benefits provided to the employee by the employers insurance contract
+							-->
+							<Agreements>
+								<Agreement>
+									<!-- Should an Enroller be present at an agreement level if they are processing demographic changes. Enrollment assisted -->
+									<AgreementTypeCode></AgreementTypeCode>
+									<PolicyNumber>123456</PolicyNumber><!-- JB: One or multiple policy numbers? -->		
+									<BillGroups>
+										<BillGroup><!-- One bill group, many products per parent person. -->
 											<!-- 
-												Why is the plan coverages in a loop under the plan itself.								
-											-->		
-											<BillGroup>		
-												<BillAccountCode/>
-												<BillGroupIdentifier/>
-												<BillSortGroupText />
-												<BenefitPlans>
-													<BenefitPlan>
-														<BenefitPlanIdentifier/>
-														<BenefitClassIdentifier/>
-														<IssueAgeQuantity/>
-														<BenefitElectedAmount/>
-														<BenefitApprovedAmount/>
-														<BenefitTypeCode/>
-														<BenefitEarningsEffectiveDate/>
-														<BenefitEarningsAmount/>
-														<BenefitEarningsModeCode/>
-														<EmployeeContributionCode/>
-														<EmployeePremiumContributionAmount/>
-														<EmployerPremiumContributionAmount/>
-														<TotalPlanPremiumAmount/>
-														<PremiumModeCode/>
+												In insurance, a segment of the employer that will be billed separately - often a separate location. 
+												Something that divides or separates; partition.  It is assigned at the member-level.
+												
+												JB: Maybe Unum's division.
+											-->
+											<BillAccountCode>0001</BillAccountCode>
+											<!-- 
+												Group/Department Identifier for Billing purposes on a per product basis. 
+												
+												JB: Is this subdivision for VB?												
+											-->
+											<BillGroupIdentifier></BillGroupIdentifier>
+											<!-- 
+												The basis to sort the records on the bill with in a given Billing Account Code. 
+												
+												JB: Unum's class maybe
+											-->
+											<BillSortGroupCode>0100</BillSortGroupCode>
+											<!-- 1-many if its an enrolment event. 0-Many  -->
+											<BenefitPlans>
+												<BenefitPlan>
+													<!-- Carrier specific product ID? example; OA-Dental -->
+													<BenefitPlanIdentifier>OA</BenefitPlanIdentifier>
+													<!-- Optional? Yes! Apparently its required for each plan. -->
+													<ProductType>
 														<!-- 
-															We think that this is rider specific information?
+															1-Accident,
+															2-Accidental Death and Dismemberment,
+															3-Cancer,
+															4-Critical Illness,
+															5-Dental, 
+															6-Hospital Indemnity,
+															7-Life,
+															8-Long term disability,
+															9-Short term disability,
+															10-Vision
 														-->
-														<ProductTypes>
-															<ProductType>
-																<ProductTypeCode>1</ProductTypeCode>
-																<ProductTypeDescriptionText>Accident</ProductTypeDescriptionText>
-															</ProductType>
-															<ProductType>
-																<ProductTypeCode>7</ProductTypeCode>
-																<ProductTypeDescriptionText>Life</ProductTypeDescriptionText>
-															</ProductType>
-															<ProductType>
-																<ProductTypeCode>10</ProductTypeCode>
-																<ProductTypeDescriptionText>Vision</ProductTypeDescriptionText>
-															</ProductType>
-														</ProductTypes>
-														<!-- 
-															If we're creating universal plan type codes, we can map those at a carrier level without the need to 
-															ask the employee to populate the internal carrier plan codes.														
-														-->
-														<BenefitPlanCoverages>
-															<BenefitPlanCoverage>
-																<PlanCode/>
-																<PlanTypeCode/>
-																<CoverageTierCode/>
-																<OriginalCoverageEffectiveDate/>
-																<CoverageEffectiveDate/>
-																<PreTaxCode/>
-																<TobaccoUseIndicator/>
-																<TakeoverCoverageIndicator/>
-																<!-- 
-																	These are opional loops. Define scenarios.
-																	Denial, Approval, Withdrawl, Complete...EOI
-																-->
-																<UnderwritingDecisions>
-																	<UnderWritingDecision>
-																		<UnderwrittenStatusCode/>
-																		<UnderwrittenAmount/>
-																		<UnderwrittenDecisionDate/>
-																	</UnderWritingDecision>
-																</UnderwritingDecisions>
-																<!-- 
-																	Are these duplications of the beneficiaries under the person?
-																	Employer>Employee>ChangeRequest>Agreement>Event>BenefitElection>BenefitPlan>BenefitPlanCoverage>Beneficiary>
-																-->
-																<Dependents><!-- 56% likely to remain here because ADP have requested the products listed in the dependent loop. -->
-																	<Dependent>													
-																		<PersonInfo>
-																			<BankAccount>
-																				<AmericanBankersAssociationRoutingNumber/>
-																			</BankAccount>					
-																			<PartyElectronicAddress>
-																				<ElectronicAddressText/>
-																				<ElectronicAddressTypeCode/>			
-																			</PartyElectronicAddress>					
-																			<PartyIdentification><!-- SSN -->
-																				<IdentificationNumberText/>
-																				<IdentificationTypeCode/>			
-																			</PartyIdentification>			
-																			<PartyPhone>
+														<ProductTypeCode>5</ProductTypeCode>
+														<ProductTypeDescriptionText>Dental</ProductTypeDescriptionText>
+													</ProductType>
+													<BenefitClassIdentifier/>
+													<IssueAgeQuantity/>
+													<BenefitElectedAmount/>
+													<BenefitApprovedAmount/>
+													<BenefitTypeCode/>
+													<BenefitEarningsEffectiveDate/>
+													<BenefitEarningsAmount/>
+													<BenefitEarningsModeCode/>
+													<EmployeeContributionCode/>
+													<EmployeePremiumContributionAmount/>
+													<EmployerPremiumContributionAmount/>
+													<TotalPlanPremiumAmount/>
+													<PremiumModeCode/>			
+													<!-- 
+														A plan can have 1 to many plan coverages.
+														The circumstances in an insurance agreement under which a benefit will be given.
+													-->
+													<BenefitPlanCoverages>
+														<BenefitPlanCoverage>
+															<!-- Carrier specific plan type codes. -->
+															<PlanCode>DENTF1</PlanCode>
+															<!-- Univeral plan type codes. Same principle as the productType v BenefitPlanIdentifier -->
+															<PlanTypeCode>DENT</PlanTypeCode>
+															<!-- Universal level of coverage being elected by the employee (including dependents) or provided by the group based on the selected benefit plan type.-->
+															<CoverageTierCode>5</CoverageTierCode>
+															<OriginalCoverageEffectiveDate/>
+															<CoverageEffectiveDate/>
+															<!-- 0-post tax, 1-pre tax -->
+															<PreTaxCode/>
+															<TobaccoUseIndicator/>
+															<TakeoverCoverageIndicator/>
+															<!-- 
+																These are opional loops. Define scenarios.
+																Denial, Approval, Withdrawl, Complete...EOI
+															-->
+															<UnderwritingDecisions>
+																<UnderWritingDecision>
+																	<UnderwrittenStatusCode/>
+																	<UnderwrittenAmount/>
+																	<UnderwrittenDecisionDate/>
+																</UnderWritingDecision>
+															</UnderwritingDecisions>
+															<!-- 
+																Are these duplications of the beneficiaries under the person?
+																Employer>Employee>ChangeRequest>Agreement>Event>BenefitElection>BenefitPlan>BenefitPlanCoverage>Beneficiary>
+															-->
+															<Dependents>
+																<Dependent>													
+																	<PersonInfo>
+																		<!-- 
+																			BankAccount:
+																			This may be used in times of claims but we see there being a claims structure outside of the agreement structure. 
+																			In which case this would be removed.
+																			For spouse standalone coverage, we would need this at time of a QLE.
+																		-->
+																		<BankAccount>
+																			<AmericanBankersAssociationRoutingNumber/>
+																		</BankAccount>	
+																		<!-- For Dependents, we only ever need a primary email address -->																					
+																		<ElectronicAddresses>
+																			<ElectronicAddress>
+																				<ElectronicAddressText>jbrowne@unum.com</ElectronicAddressText>
+																				<ElectronicAddressTypeCode>1</ElectronicAddressTypeCode>			
+																			</ElectronicAddress>		
+																		</ElectronicAddresses>	
+																		<PersonIdentifications>
+																			<Identification>
+																				<IdentificationNumberText>123-45-6789</IdentificationNumberText> <!-- -->
+																				<!-- 1-SSN, 2-SIN, 7-Employee or Employer defined DependentIdentificationNumber -->
+																				<IdentificationTypeCode>1</IdentificationTypeCode>		
+																			</Identification>
+																			<Identification>
+																				<IdentificationNumberText>123456789</IdentificationNumberText> <!-- -->
+																				<IdentificationTypeCode>7</IdentificationTypeCode>		
+																			</Identification>
+																		</PersonIdentifications>
+																		<!-- Mobile is the only use case so far but its optional-->
+																		<Phones>
+																			<Phone>
 																				<PhoneNumberText/>
-																				<PhoneTypeCode/>
-																			</PartyPhone>					
-																			<PartyPostalAddress>
-																				<AddressTypeCode/>
+																				<PhoneTypeCode>1</PhoneTypeCode>
+																			</Phone>
+																			<Phone>
+																				<PhoneNumberText/>
+																				<PhoneTypeCode>2</PhoneTypeCode><!--1-mobile,2-work,3-home -->
+																			</Phone>
+																			<Phone>
+																				<PhoneNumberText/>
+																				<PhoneTypeCode>3</PhoneTypeCode><!--1-mobile,2-work,3-home -->
+																			</Phone>
+																		</Phones>		
+																		<!-- Mailing address but conditional -->
+																		<PostalAddresses>
+																			<PostalAddress>
+																				<AddressTypeCode>1</AddressTypeCode>
 																				<CityName/>
 																				<CountryCode/>
 																				<FirstLineAddress/>
@@ -252,49 +352,9 @@
 																				<SecondLineAddress/>
 																				<StateProvinceCode/>
 																				<ThirdLineAddress/>
-																			</PartyPostalAddress>
-																			<BirthDate/>
-																			<DisabilityIndicator/><!-- JB: I think this is specific to the dependents? -->
-																			<FirstName></FirstName>
-																			<FullName></FullName>
-																			<GenderCode></GenderCode>
-																			<LastName></LastName>
-																			<MaritalStatusCode></MaritalStatusCode>
-																			<MiddleName></MiddleName>
-																			<PersonTypeCode></PersonTypeCode><!-- JB: I beleive this is redundent here -->
-																			<PrefixCode></PrefixCode>
-																			<StudentStatusCode></StudentStatusCode>
-																			<SuffixCode></SuffixCode>
-																		</PersonInfo>
-																	</Dependent>
-																</Dependents>
-																
-																<Beneficiaries>
-																	<Beneficiary>													
-																		<BeneficiaryTypeCode>1</BeneficiaryTypeCode>
-																		<BeneficiaryPercent/>
-																		<BeneficiaryIndicatorCode/>
-																		<RelationshipCode/>
-																		<BeneficiaryAmount/>
-																		<TrustEstablishmentDate/>
-																		<PersonInfo>
-																			<BankAccount>
-																				<AmericanBankersAssociationRoutingNumber/>
-																			</BankAccount>					
-																			<PartyElectronicAddress>
-																				<ElectronicAddressText/>
-																				<ElectronicAddressTypeCode/>			
-																			</PartyElectronicAddress>					
-																			<PartyIdentification><!-- SSN -->
-																				<IdentificationNumberText/>
-																				<IdentificationTypeCode/>			
-																			</PartyIdentification>			
-																			<PartyPhone>
-																				<PhoneNumberText/>
-																				<PhoneTypeCode/>
-																			</PartyPhone>					
-																			<PartyPostalAddress>
-																				<AddressTypeCode/>
+																			</PostalAddress>
+																			<PostalAddress>
+																				<AddressTypeCode>3</AddressTypeCode>
 																				<CityName/>
 																				<CountryCode/>
 																				<FirstLineAddress/>
@@ -302,33 +362,102 @@
 																				<SecondLineAddress/>
 																				<StateProvinceCode/>
 																				<ThirdLineAddress/>
-																			</PartyPostalAddress>
-																			<BirthDate/>
-																			<DisabilityIndicator/><!-- JB: I think this is specific to the dependents? -->
-																			<FirstName></FirstName>
-																			<FullName></FullName>
-																			<GenderCode></GenderCode>
-																			<LastName></LastName>
-																			<MaritalStatusCode></MaritalStatusCode>
-																			<MiddleName></MiddleName>
-																			<PersonTypeCode></PersonTypeCode><!-- JB: I beleive this is redundent here -->
-																			<PrefixCode></PrefixCode>
-																			<StudentStatusCode></StudentStatusCode>
-																			<SuffixCode></SuffixCode>
-																		</PersonInfo>
-																	</Beneficiary>
-																</Beneficiaries>
-															</BenefitPlanCoverage>
-														</BenefitPlanCoverages>
-													</BenefitPlan>
-												</BenefitPlans>
-											</BillGroup>
-										</BenefitElection>
-									</BenefitElections>										
-								</Event>
-							</Events>										
-						</Agreement>					
-					</Agreements>
+																			</PostalAddress>
+																		</PostalAddresses>
+																		<DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber></DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber>
+																		<BirthDate/>
+																		<DisabilityIndicator/>
+																		<FirstName></FirstName>
+																		<MiddleName></MiddleName>
+																		<GenderCode></GenderCode>
+																		<LastName></LastName>
+																		<MiddleName></MiddleName>
+																		<PrefixCode></PrefixCode>
+																		<StudentStatusCode></StudentStatusCode>
+																		<SuffixCode></SuffixCode>
+																		<RelationshipTypeCode></RelationshipTypeCode>
+																	</PersonInfo>
+																</Dependent>
+															</Dependents>
+															
+															<Beneficiaries>
+																<!-- What information is stored for a beneficiary across carriers? Unum stores little at time of enrollment for example. Is this too much information?-->
+																<Beneficiary>			
+																	<!-- 1-Person,2-Trust,3-Estate,4-Charity,5-Other. 2-5 signify that its an organisation -->
+																	<BeneficiaryTypeCode>1</BeneficiaryTypeCode>
+																	<BeneficiaryPercent/>
+																	<!-- 1-Primary, 2-secondary -->
+																	<BeneficiaryIndicatorCode/>
+																	<!-- -->
+																	<RelationshipCode/>
+																	<BeneficiaryAmount/>
+																	<TrustEstablishmentDate/>
+																	<PersonInfo>
+																		<!-- JB: Does this fall under the claims section that doesnt exist yet? -->
+																		<BankAccount>
+																			<AmericanBankersAssociationRoutingNumber/>
+																		</BankAccount>		
+																		<!-- For Beneficiaries, we only ever need a primary email address -->	
+																		<ElectronicAddresses>
+																			<ElectronicAddress>
+																				<ElectronicAddressText>jbrowne@unum.com</ElectronicAddressText>
+																				<ElectronicAddressTypeCode>1</ElectronicAddressTypeCode>			
+																			</ElectronicAddress>
+																		</ElectronicAddresses>
+																		<!-- SSN for Person or Tax ID for an Organisation -->
+																		<PersonIdentifications>
+																			<Identification>
+																				<IdentificationNumberText>123-45-6789</IdentificationNumberText> <!-- -->
+																				<!-- 1-SSN, 2-SIN, 7-Employee or Employer defined DependentIdentificationNumber -->
+																				<IdentificationTypeCode>1</IdentificationTypeCode>		
+																			</Identification>
+																		</PersonIdentifications>
+																		<!-- Home number for person, work for an organisation -->
+																		<Phones>
+																			<Phone>
+																				<PhoneNumberText/>
+																				<PhoneTypeCode>1</PhoneTypeCode>
+																			</Phone>
+																			<Phone>
+																				<PhoneNumberText/>
+																				<PhoneTypeCode>2</PhoneTypeCode><!--1-mobile,2-work,3-home -->
+																			</Phone>
+																			<Phone>
+																				<PhoneNumberText/>
+																				<PhoneTypeCode>3</PhoneTypeCode><!--1-mobile,2-work,3-home -->
+																			</Phone>
+																		</Phones>	
+																		<!-- Mailing address only so far, for both person and org. Primary situational. -->
+																		<PostalAddresses>
+																			<PostalAddress>
+																				<AddressTypeCode>1</AddressTypeCode>
+																				<CityName/>
+																				<CountryCode/>
+																				<FirstLineAddress/>
+																				<PostalCode/>
+																				<SecondLineAddress/>
+																				<StateProvinceCode/>
+																				<ThirdLineAddress/>
+																			</PostalAddress>
+																		</PostalAddresses>
+																		<BirthDate/>
+																		<FirstName></FirstName>
+																		<FullName></FullName>
+																		<LastName></LastName>
+																		<MiddleName></MiddleName>
+																	</PersonInfo>
+																</Beneficiary>
+															</Beneficiaries>
+														</BenefitPlanCoverage>
+													</BenefitPlanCoverages>
+												</BenefitPlan>
+											</BenefitPlans>											
+										</BillGroup>
+									</BillGroups>
+								</Agreement>					
+							</Agreements>																
+						</Event>
+					</Events>
 				</Person>
 			</Persons>
 		</Organisation>
