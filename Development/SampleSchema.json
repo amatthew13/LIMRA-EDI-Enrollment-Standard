@@ -1,0 +1,3498 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"additionalProperties": false,
+	"definitions": {
+		".LimraRoot": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"APIKey": {
+					"$ref": "#/definitions/xs:anyType"
+				},
+				"Audit": {
+					"additionalProperties": false,
+					"patternProperties": {
+						"^@xmlns(:\\w+)?$": {
+							"type": "string"
+						},
+						"^@xsi:\\w+$": {
+							"type": "string"
+						},
+						"^\\?\\w+$": {
+							"type": "string"
+						}
+					},
+					"properties": {
+						"#": {
+							"type": "string"
+						},
+						"EnrollmentPartnerIdentifier": {
+							"$ref": "#/definitions/xs:anyType"
+						},
+						"EnrollmentPartnerName": {
+							"$ref": "#/definitions/xs:anyType"
+						},
+						"FileCreationDate": {
+							"$ref": "#/definitions/xs:anyType"
+						},
+						"FileCreationTime": {
+							"$ref": "#/definitions/xs:anyType"
+						},
+						"FileLayoutVersionIdentifier": {
+							"$ref": "#/definitions/xs:anyType"
+						},
+						"FileTypeCode": {
+							"$ref": "#/definitions/xs:anyType"
+						},
+						"InsuranceCarrierIdentifier": {
+							"$ref": "#/definitions/xs:anyType"
+						},
+						"InsuranceCarrierName": {
+							"$ref": "#/definitions/xs:anyType"
+						},
+						"Organisation": {
+							"additionalProperties": false,
+							"patternProperties": {
+								"^@xmlns(:\\w+)?$": {
+									"type": "string"
+								},
+								"^@xsi:\\w+$": {
+									"type": "string"
+								},
+								"^\\?\\w+$": {
+									"type": "string"
+								}
+							},
+							"properties": {
+								"#": {
+									"type": "string"
+								},
+								"ElectronicAddress": {
+									"additionalProperties": false,
+									"patternProperties": {
+										"^@xmlns(:\\w+)?$": {
+											"type": "string"
+										},
+										"^@xsi:\\w+$": {
+											"type": "string"
+										},
+										"^\\?\\w+$": {
+											"type": "string"
+										}
+									},
+									"properties": {
+										"#": {
+											"type": "string"
+										},
+										"ElectronicAddressText": {
+											"$ref": "#/definitions/xs:anyType"
+										},
+										"ElectronicAddressTypeCode": {
+											"$ref": "#/definitions/xs:anyType"
+										}
+									},
+									"required": [
+										"ElectronicAddressText",
+										"ElectronicAddressTypeCode"
+									],
+									"type": "object"
+								},
+								"FullName": {
+									"$ref": "#/definitions/xs:anyType"
+								},
+								"Identification": {
+									"additionalProperties": false,
+									"patternProperties": {
+										"^@xmlns(:\\w+)?$": {
+											"type": "string"
+										},
+										"^@xsi:\\w+$": {
+											"type": "string"
+										},
+										"^\\?\\w+$": {
+											"type": "string"
+										}
+									},
+									"properties": {
+										"#": {
+											"type": "string"
+										},
+										"IdentificationNumberText": {
+											"$ref": "#/definitions/xs:anyType"
+										},
+										"IdentificationTypeCode": {
+											"$ref": "#/definitions/xs:anyType"
+										}
+									},
+									"required": [
+										"IdentificationNumberText",
+										"IdentificationTypeCode"
+									],
+									"type": "object"
+								},
+								"OrganizationTypeCode": {
+									"$ref": "#/definitions/xs:anyType"
+								},
+								"Persons": {
+									"additionalProperties": false,
+									"patternProperties": {
+										"^@xmlns(:\\w+)?$": {
+											"type": "string"
+										},
+										"^@xsi:\\w+$": {
+											"type": "string"
+										},
+										"^\\?\\w+$": {
+											"type": "string"
+										}
+									},
+									"properties": {
+										"#": {
+											"type": "string"
+										},
+										"Person": {
+											"additionalProperties": false,
+											"patternProperties": {
+												"^@xmlns(:\\w+)?$": {
+													"type": "string"
+												},
+												"^@xsi:\\w+$": {
+													"type": "string"
+												},
+												"^\\?\\w+$": {
+													"type": "string"
+												}
+											},
+											"properties": {
+												"#": {
+													"type": "string"
+												},
+												"EmploymentInfo": {
+													"additionalProperties": false,
+													"patternProperties": {
+														"^@xmlns(:\\w+)?$": {
+															"type": "string"
+														},
+														"^@xsi:\\w+$": {
+															"type": "string"
+														},
+														"^\\?\\w+$": {
+															"type": "string"
+														}
+													},
+													"properties": {
+														"#": {
+															"type": "string"
+														},
+														"AdjustedServiceDate": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"EmploymentIncomeDeductions": {
+															"additionalProperties": false,
+															"patternProperties": {
+																"^@xmlns(:\\w+)?$": {
+																	"type": "string"
+																},
+																"^@xsi:\\w+$": {
+																	"type": "string"
+																},
+																"^\\?\\w+$": {
+																	"type": "string"
+																}
+															},
+															"properties": {
+																"#": {
+																	"type": "string"
+																},
+																"EmploymentIncomeDeduction": {
+																	"anyOf": [
+																		{
+																			"additionalProperties": false,
+																			"patternProperties": {
+																				"^@xmlns(:\\w+)?$": {
+																					"type": "string"
+																				},
+																				"^@xsi:\\w+$": {
+																					"type": "string"
+																				},
+																				"^\\?\\w+$": {
+																					"type": "string"
+																				}
+																			},
+																			"properties": {
+																				"#": {
+																					"type": "string"
+																				},
+																				"DeductionAmount": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"DeductionTypeCode": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"PayrollDeductionFrequencyCode": {
+																					"$ref": "#/definitions/xs:anyType"
+																				}
+																			},
+																			"required": [
+																				"DeductionAmount",
+																				"DeductionTypeCode",
+																				"PayrollDeductionFrequencyCode"
+																			],
+																			"type": "object"
+																		},
+																		{
+																			"items": {
+																				"additionalProperties": false,
+																				"patternProperties": {
+																					"^@xmlns(:\\w+)?$": {
+																						"type": "string"
+																					},
+																					"^@xsi:\\w+$": {
+																						"type": "string"
+																					},
+																					"^\\?\\w+$": {
+																						"type": "string"
+																					}
+																				},
+																				"properties": {
+																					"#": {
+																						"type": "string"
+																					},
+																					"DeductionAmount": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"DeductionTypeCode": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"PayrollDeductionFrequencyCode": {
+																						"$ref": "#/definitions/xs:anyType"
+																					}
+																				},
+																				"required": [
+																					"DeductionAmount",
+																					"DeductionTypeCode",
+																					"PayrollDeductionFrequencyCode"
+																				],
+																				"type": "object"
+																			},
+																			"minItems": 1,
+																			"type": "array"
+																		}
+																	]
+																}
+															},
+															"required": [
+																"EmploymentIncomeDeduction"
+															],
+															"type": "object"
+														},
+														"EmploymentIncomes": {
+															"additionalProperties": false,
+															"patternProperties": {
+																"^@xmlns(:\\w+)?$": {
+																	"type": "string"
+																},
+																"^@xsi:\\w+$": {
+																	"type": "string"
+																},
+																"^\\?\\w+$": {
+																	"type": "string"
+																}
+															},
+															"properties": {
+																"#": {
+																	"type": "string"
+																},
+																"EmploymentIncome": {
+																	"anyOf": [
+																		{
+																			"additionalProperties": false,
+																			"patternProperties": {
+																				"^@xmlns(:\\w+)?$": {
+																					"type": "string"
+																				},
+																				"^@xsi:\\w+$": {
+																					"type": "string"
+																				},
+																				"^\\?\\w+$": {
+																					"type": "string"
+																				}
+																			},
+																			"properties": {
+																				"#": {
+																					"type": "string"
+																				},
+																				"IncomeAmount": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"IncomeEffectiveDate": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"IncomeModeCode": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"IncomeTypeCode": {
+																					"$ref": "#/definitions/xs:anyType"
+																				}
+																			},
+																			"required": [
+																				"IncomeAmount",
+																				"IncomeEffectiveDate",
+																				"IncomeModeCode",
+																				"IncomeTypeCode"
+																			],
+																			"type": "object"
+																		},
+																		{
+																			"items": {
+																				"additionalProperties": false,
+																				"patternProperties": {
+																					"^@xmlns(:\\w+)?$": {
+																						"type": "string"
+																					},
+																					"^@xsi:\\w+$": {
+																						"type": "string"
+																					},
+																					"^\\?\\w+$": {
+																						"type": "string"
+																					}
+																				},
+																				"properties": {
+																					"#": {
+																						"type": "string"
+																					},
+																					"IncomeAmount": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"IncomeEffectiveDate": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"IncomeModeCode": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"IncomeTypeCode": {
+																						"$ref": "#/definitions/xs:anyType"
+																					}
+																				},
+																				"required": [
+																					"IncomeAmount",
+																					"IncomeEffectiveDate",
+																					"IncomeModeCode",
+																					"IncomeTypeCode"
+																				],
+																				"type": "object"
+																			},
+																			"minItems": 1,
+																			"type": "array"
+																		}
+																	]
+																}
+															},
+															"required": [
+																"EmploymentIncome"
+															],
+															"type": "object"
+														},
+														"EmploymentStatusCode": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"EmploymentTypeCode": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"ExemptCode": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"HumanResourcePartnerEmailAddress": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"JobTitleText": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"MostRecentHireDate": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"OccupationText": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"OriginalHireDate": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"PayrollDeductionFrequencyCode": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"PayrollFrequencyQuantity": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"SupervisorEmailAddress": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"SupervisorFullName": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"TerminationReasonCode": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"UnionIndicator": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"UnionLocalName": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"UnionLocalNumber": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"UnionMemberNumber": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"WorkHoursFrequencyCode": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"WorkHoursQuantity": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"WorkLocationText": {
+															"$ref": "#/definitions/xs:anyType"
+														}
+													},
+													"required": [
+														"AdjustedServiceDate",
+														"EmploymentIncomeDeductions",
+														"EmploymentIncomes",
+														"EmploymentStatusCode",
+														"EmploymentTypeCode",
+														"ExemptCode",
+														"HumanResourcePartnerEmailAddress",
+														"JobTitleText",
+														"MostRecentHireDate",
+														"OccupationText",
+														"OriginalHireDate",
+														"PayrollDeductionFrequencyCode",
+														"PayrollFrequencyQuantity",
+														"SupervisorEmailAddress",
+														"SupervisorFullName",
+														"TerminationReasonCode",
+														"UnionIndicator",
+														"UnionLocalName",
+														"UnionLocalNumber",
+														"UnionMemberNumber",
+														"WorkHoursFrequencyCode",
+														"WorkHoursQuantity",
+														"WorkLocationText"
+													],
+													"type": "object"
+												},
+												"Events": {
+													"additionalProperties": false,
+													"patternProperties": {
+														"^@xmlns(:\\w+)?$": {
+															"type": "string"
+														},
+														"^@xsi:\\w+$": {
+															"type": "string"
+														},
+														"^\\?\\w+$": {
+															"type": "string"
+														}
+													},
+													"properties": {
+														"#": {
+															"type": "string"
+														},
+														"Event": {
+															"additionalProperties": false,
+															"patternProperties": {
+																"^@xmlns(:\\w+)?$": {
+																	"type": "string"
+																},
+																"^@xsi:\\w+$": {
+																	"type": "string"
+																},
+																"^\\?\\w+$": {
+																	"type": "string"
+																}
+															},
+															"properties": {
+																"#": {
+																	"type": "string"
+																},
+																"Agreements": {
+																	"additionalProperties": false,
+																	"patternProperties": {
+																		"^@xmlns(:\\w+)?$": {
+																			"type": "string"
+																		},
+																		"^@xsi:\\w+$": {
+																			"type": "string"
+																		},
+																		"^\\?\\w+$": {
+																			"type": "string"
+																		}
+																	},
+																	"properties": {
+																		"#": {
+																			"type": "string"
+																		},
+																		"Agreement": {
+																			"additionalProperties": false,
+																			"patternProperties": {
+																				"^@xmlns(:\\w+)?$": {
+																					"type": "string"
+																				},
+																				"^@xsi:\\w+$": {
+																					"type": "string"
+																				},
+																				"^\\?\\w+$": {
+																					"type": "string"
+																				}
+																			},
+																			"properties": {
+																				"#": {
+																					"type": "string"
+																				},
+																				"AgreementTypeCode": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"BillGroups": {
+																					"additionalProperties": false,
+																					"patternProperties": {
+																						"^@xmlns(:\\w+)?$": {
+																							"type": "string"
+																						},
+																						"^@xsi:\\w+$": {
+																							"type": "string"
+																						},
+																						"^\\?\\w+$": {
+																							"type": "string"
+																						}
+																					},
+																					"properties": {
+																						"#": {
+																							"type": "string"
+																						},
+																						"BillGroup": {
+																							"additionalProperties": false,
+																							"patternProperties": {
+																								"^@xmlns(:\\w+)?$": {
+																									"type": "string"
+																								},
+																								"^@xsi:\\w+$": {
+																									"type": "string"
+																								},
+																								"^\\?\\w+$": {
+																									"type": "string"
+																								}
+																							},
+																							"properties": {
+																								"#": {
+																									"type": "string"
+																								},
+																								"BenefitPlans": {
+																									"additionalProperties": false,
+																									"patternProperties": {
+																										"^@xmlns(:\\w+)?$": {
+																											"type": "string"
+																										},
+																										"^@xsi:\\w+$": {
+																											"type": "string"
+																										},
+																										"^\\?\\w+$": {
+																											"type": "string"
+																										}
+																									},
+																									"properties": {
+																										"#": {
+																											"type": "string"
+																										},
+																										"BenefitPlan": {
+																											"additionalProperties": false,
+																											"patternProperties": {
+																												"^@xmlns(:\\w+)?$": {
+																													"type": "string"
+																												},
+																												"^@xsi:\\w+$": {
+																													"type": "string"
+																												},
+																												"^\\?\\w+$": {
+																													"type": "string"
+																												}
+																											},
+																											"properties": {
+																												"#": {
+																													"type": "string"
+																												},
+																												"BenefitApprovedAmount": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"BenefitClassIdentifier": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"BenefitEarningsAmount": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"BenefitEarningsEffectiveDate": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"BenefitEarningsModeCode": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"BenefitElectedAmount": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"BenefitPlanCoverages": {
+																													"additionalProperties": false,
+																													"patternProperties": {
+																														"^@xmlns(:\\w+)?$": {
+																															"type": "string"
+																														},
+																														"^@xsi:\\w+$": {
+																															"type": "string"
+																														},
+																														"^\\?\\w+$": {
+																															"type": "string"
+																														}
+																													},
+																													"properties": {
+																														"#": {
+																															"type": "string"
+																														},
+																														"BenefitPlanCoverage": {
+																															"additionalProperties": false,
+																															"patternProperties": {
+																																"^@xmlns(:\\w+)?$": {
+																																	"type": "string"
+																																},
+																																"^@xsi:\\w+$": {
+																																	"type": "string"
+																																},
+																																"^\\?\\w+$": {
+																																	"type": "string"
+																																}
+																															},
+																															"properties": {
+																																"#": {
+																																	"type": "string"
+																																},
+																																"Beneficiaries": {
+																																	"additionalProperties": false,
+																																	"patternProperties": {
+																																		"^@xmlns(:\\w+)?$": {
+																																			"type": "string"
+																																		},
+																																		"^@xsi:\\w+$": {
+																																			"type": "string"
+																																		},
+																																		"^\\?\\w+$": {
+																																			"type": "string"
+																																		}
+																																	},
+																																	"properties": {
+																																		"#": {
+																																			"type": "string"
+																																		},
+																																		"Beneficiary": {
+																																			"additionalProperties": false,
+																																			"patternProperties": {
+																																				"^@xmlns(:\\w+)?$": {
+																																					"type": "string"
+																																				},
+																																				"^@xsi:\\w+$": {
+																																					"type": "string"
+																																				},
+																																				"^\\?\\w+$": {
+																																					"type": "string"
+																																				}
+																																			},
+																																			"properties": {
+																																				"#": {
+																																					"type": "string"
+																																				},
+																																				"BeneficiaryAmount": {
+																																					"$ref": "#/definitions/xs:anyType"
+																																				},
+																																				"BeneficiaryIndicatorCode": {
+																																					"$ref": "#/definitions/xs:anyType"
+																																				},
+																																				"BeneficiaryPercent": {
+																																					"$ref": "#/definitions/xs:anyType"
+																																				},
+																																				"BeneficiaryTypeCode": {
+																																					"additionalProperties": false,
+																																					"patternProperties": {
+																																						"^@xmlns(:\\w+)?$": {
+																																							"type": "string"
+																																						},
+																																						"^@xsi:\\w+$": {
+																																							"type": "string"
+																																						},
+																																						"^\\?\\w+$": {
+																																							"type": "string"
+																																						}
+																																					},
+																																					"properties": {
+																																						"#": {
+																																							"type": "string"
+																																						},
+																																						"$": {
+																																							"$ref": "#/definitions/xs:int"
+																																						}
+																																					},
+																																					"type": "object"
+																																				},
+																																				"PersonInfo": {
+																																					"additionalProperties": false,
+																																					"patternProperties": {
+																																						"^@xmlns(:\\w+)?$": {
+																																							"type": "string"
+																																						},
+																																						"^@xsi:\\w+$": {
+																																							"type": "string"
+																																						},
+																																						"^\\?\\w+$": {
+																																							"type": "string"
+																																						}
+																																					},
+																																					"properties": {
+																																						"#": {
+																																							"type": "string"
+																																						},
+																																						"BankAccount": {
+																																							"additionalProperties": false,
+																																							"patternProperties": {
+																																								"^@xmlns(:\\w+)?$": {
+																																									"type": "string"
+																																								},
+																																								"^@xsi:\\w+$": {
+																																									"type": "string"
+																																								},
+																																								"^\\?\\w+$": {
+																																									"type": "string"
+																																								}
+																																							},
+																																							"properties": {
+																																								"#": {
+																																									"type": "string"
+																																								},
+																																								"AmericanBankersAssociationRoutingNumber": {
+																																									"$ref": "#/definitions/xs:anyType"
+																																								}
+																																							},
+																																							"required": [
+																																								"AmericanBankersAssociationRoutingNumber"
+																																							],
+																																							"type": "object"
+																																						},
+																																						"BirthDate": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"ElectronicAddresses": {
+																																							"additionalProperties": false,
+																																							"patternProperties": {
+																																								"^@xmlns(:\\w+)?$": {
+																																									"type": "string"
+																																								},
+																																								"^@xsi:\\w+$": {
+																																									"type": "string"
+																																								},
+																																								"^\\?\\w+$": {
+																																									"type": "string"
+																																								}
+																																							},
+																																							"properties": {
+																																								"#": {
+																																									"type": "string"
+																																								},
+																																								"ElectronicAddress": {
+																																									"additionalProperties": false,
+																																									"patternProperties": {
+																																										"^@xmlns(:\\w+)?$": {
+																																											"type": "string"
+																																										},
+																																										"^@xsi:\\w+$": {
+																																											"type": "string"
+																																										},
+																																										"^\\?\\w+$": {
+																																											"type": "string"
+																																										}
+																																									},
+																																									"properties": {
+																																										"#": {
+																																											"type": "string"
+																																										},
+																																										"ElectronicAddressText": {
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"$": {
+																																													"$ref": "#/definitions/xs:string"
+																																												}
+																																											},
+																																											"type": "object"
+																																										},
+																																										"ElectronicAddressTypeCode": {
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"$": {
+																																													"$ref": "#/definitions/xs:int"
+																																												}
+																																											},
+																																											"type": "object"
+																																										}
+																																									},
+																																									"required": [
+																																										"ElectronicAddressText",
+																																										"ElectronicAddressTypeCode"
+																																									],
+																																									"type": "object"
+																																								}
+																																							},
+																																							"required": [
+																																								"ElectronicAddress"
+																																							],
+																																							"type": "object"
+																																						},
+																																						"FirstName": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"FullName": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"LastName": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"MiddleName": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"PersonIdentifications": {
+																																							"additionalProperties": false,
+																																							"patternProperties": {
+																																								"^@xmlns(:\\w+)?$": {
+																																									"type": "string"
+																																								},
+																																								"^@xsi:\\w+$": {
+																																									"type": "string"
+																																								},
+																																								"^\\?\\w+$": {
+																																									"type": "string"
+																																								}
+																																							},
+																																							"properties": {
+																																								"#": {
+																																									"type": "string"
+																																								},
+																																								"Identification": {
+																																									"additionalProperties": false,
+																																									"patternProperties": {
+																																										"^@xmlns(:\\w+)?$": {
+																																											"type": "string"
+																																										},
+																																										"^@xsi:\\w+$": {
+																																											"type": "string"
+																																										},
+																																										"^\\?\\w+$": {
+																																											"type": "string"
+																																										}
+																																									},
+																																									"properties": {
+																																										"#": {
+																																											"type": "string"
+																																										},
+																																										"IdentificationNumberText": {
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"$": {
+																																													"$ref": "#/definitions/xs:string"
+																																												}
+																																											},
+																																											"type": "object"
+																																										},
+																																										"IdentificationTypeCode": {
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"$": {
+																																													"$ref": "#/definitions/xs:int"
+																																												}
+																																											},
+																																											"type": "object"
+																																										}
+																																									},
+																																									"required": [
+																																										"IdentificationNumberText",
+																																										"IdentificationTypeCode"
+																																									],
+																																									"type": "object"
+																																								}
+																																							},
+																																							"required": [
+																																								"Identification"
+																																							],
+																																							"type": "object"
+																																						},
+																																						"Phones": {
+																																							"additionalProperties": false,
+																																							"patternProperties": {
+																																								"^@xmlns(:\\w+)?$": {
+																																									"type": "string"
+																																								},
+																																								"^@xsi:\\w+$": {
+																																									"type": "string"
+																																								},
+																																								"^\\?\\w+$": {
+																																									"type": "string"
+																																								}
+																																							},
+																																							"properties": {
+																																								"#": {
+																																									"type": "string"
+																																								},
+																																								"Phone": {
+																																									"anyOf": [
+																																										{
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"PhoneNumberText": {
+																																													"$ref": "#/definitions/xs:anyType"
+																																												},
+																																												"PhoneTypeCode": {
+																																													"additionalProperties": false,
+																																													"patternProperties": {
+																																														"^@xmlns(:\\w+)?$": {
+																																															"type": "string"
+																																														},
+																																														"^@xsi:\\w+$": {
+																																															"type": "string"
+																																														},
+																																														"^\\?\\w+$": {
+																																															"type": "string"
+																																														}
+																																													},
+																																													"properties": {
+																																														"#": {
+																																															"type": "string"
+																																														},
+																																														"$": {
+																																															"$ref": "#/definitions/xs:int"
+																																														}
+																																													},
+																																													"type": "object"
+																																												}
+																																											},
+																																											"required": [
+																																												"PhoneNumberText",
+																																												"PhoneTypeCode"
+																																											],
+																																											"type": "object"
+																																										},
+																																										{
+																																											"items": {
+																																												"additionalProperties": false,
+																																												"patternProperties": {
+																																													"^@xmlns(:\\w+)?$": {
+																																														"type": "string"
+																																													},
+																																													"^@xsi:\\w+$": {
+																																														"type": "string"
+																																													},
+																																													"^\\?\\w+$": {
+																																														"type": "string"
+																																													}
+																																												},
+																																												"properties": {
+																																													"#": {
+																																														"type": "string"
+																																													},
+																																													"PhoneNumberText": {
+																																														"$ref": "#/definitions/xs:anyType"
+																																													},
+																																													"PhoneTypeCode": {
+																																														"additionalProperties": false,
+																																														"patternProperties": {
+																																															"^@xmlns(:\\w+)?$": {
+																																																"type": "string"
+																																															},
+																																															"^@xsi:\\w+$": {
+																																																"type": "string"
+																																															},
+																																															"^\\?\\w+$": {
+																																																"type": "string"
+																																															}
+																																														},
+																																														"properties": {
+																																															"#": {
+																																																"type": "string"
+																																															},
+																																															"$": {
+																																																"$ref": "#/definitions/xs:int"
+																																															}
+																																														},
+																																														"type": "object"
+																																													}
+																																												},
+																																												"required": [
+																																													"PhoneNumberText",
+																																													"PhoneTypeCode"
+																																												],
+																																												"type": "object"
+																																											},
+																																											"minItems": 1,
+																																											"type": "array"
+																																										}
+																																									]
+																																								}
+																																							},
+																																							"required": [
+																																								"Phone"
+																																							],
+																																							"type": "object"
+																																						},
+																																						"PostalAddresses": {
+																																							"additionalProperties": false,
+																																							"patternProperties": {
+																																								"^@xmlns(:\\w+)?$": {
+																																									"type": "string"
+																																								},
+																																								"^@xsi:\\w+$": {
+																																									"type": "string"
+																																								},
+																																								"^\\?\\w+$": {
+																																									"type": "string"
+																																								}
+																																							},
+																																							"properties": {
+																																								"#": {
+																																									"type": "string"
+																																								},
+																																								"PostalAddress": {
+																																									"additionalProperties": false,
+																																									"patternProperties": {
+																																										"^@xmlns(:\\w+)?$": {
+																																											"type": "string"
+																																										},
+																																										"^@xsi:\\w+$": {
+																																											"type": "string"
+																																										},
+																																										"^\\?\\w+$": {
+																																											"type": "string"
+																																										}
+																																									},
+																																									"properties": {
+																																										"#": {
+																																											"type": "string"
+																																										},
+																																										"AddressTypeCode": {
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"$": {
+																																													"$ref": "#/definitions/xs:int"
+																																												}
+																																											},
+																																											"type": "object"
+																																										},
+																																										"CityName": {
+																																											"$ref": "#/definitions/xs:anyType"
+																																										},
+																																										"CountryCode": {
+																																											"$ref": "#/definitions/xs:anyType"
+																																										},
+																																										"FirstLineAddress": {
+																																											"$ref": "#/definitions/xs:anyType"
+																																										},
+																																										"PostalCode": {
+																																											"$ref": "#/definitions/xs:anyType"
+																																										},
+																																										"SecondLineAddress": {
+																																											"$ref": "#/definitions/xs:anyType"
+																																										},
+																																										"StateProvinceCode": {
+																																											"$ref": "#/definitions/xs:anyType"
+																																										},
+																																										"ThirdLineAddress": {
+																																											"$ref": "#/definitions/xs:anyType"
+																																										}
+																																									},
+																																									"required": [
+																																										"AddressTypeCode",
+																																										"CityName",
+																																										"CountryCode",
+																																										"FirstLineAddress",
+																																										"PostalCode",
+																																										"SecondLineAddress",
+																																										"StateProvinceCode",
+																																										"ThirdLineAddress"
+																																									],
+																																									"type": "object"
+																																								}
+																																							},
+																																							"required": [
+																																								"PostalAddress"
+																																							],
+																																							"type": "object"
+																																						}
+																																					},
+																																					"required": [
+																																						"BankAccount",
+																																						"BirthDate",
+																																						"ElectronicAddresses",
+																																						"FirstName",
+																																						"FullName",
+																																						"LastName",
+																																						"MiddleName",
+																																						"PersonIdentifications",
+																																						"Phones",
+																																						"PostalAddresses"
+																																					],
+																																					"type": "object"
+																																				},
+																																				"RelationshipCode": {
+																																					"$ref": "#/definitions/xs:anyType"
+																																				},
+																																				"TrustEstablishmentDate": {
+																																					"$ref": "#/definitions/xs:anyType"
+																																				}
+																																			},
+																																			"required": [
+																																				"BeneficiaryAmount",
+																																				"BeneficiaryIndicatorCode",
+																																				"BeneficiaryPercent",
+																																				"BeneficiaryTypeCode",
+																																				"PersonInfo",
+																																				"RelationshipCode",
+																																				"TrustEstablishmentDate"
+																																			],
+																																			"type": "object"
+																																		}
+																																	},
+																																	"required": [
+																																		"Beneficiary"
+																																	],
+																																	"type": "object"
+																																},
+																																"CoverageEffectiveDate": {
+																																	"$ref": "#/definitions/xs:anyType"
+																																},
+																																"CoverageTierCode": {
+																																	"additionalProperties": false,
+																																	"patternProperties": {
+																																		"^@xmlns(:\\w+)?$": {
+																																			"type": "string"
+																																		},
+																																		"^@xsi:\\w+$": {
+																																			"type": "string"
+																																		},
+																																		"^\\?\\w+$": {
+																																			"type": "string"
+																																		}
+																																	},
+																																	"properties": {
+																																		"#": {
+																																			"type": "string"
+																																		},
+																																		"$": {
+																																			"$ref": "#/definitions/xs:int"
+																																		}
+																																	},
+																																	"type": "object"
+																																},
+																																"Dependents": {
+																																	"additionalProperties": false,
+																																	"patternProperties": {
+																																		"^@xmlns(:\\w+)?$": {
+																																			"type": "string"
+																																		},
+																																		"^@xsi:\\w+$": {
+																																			"type": "string"
+																																		},
+																																		"^\\?\\w+$": {
+																																			"type": "string"
+																																		}
+																																	},
+																																	"properties": {
+																																		"#": {
+																																			"type": "string"
+																																		},
+																																		"Dependent": {
+																																			"additionalProperties": false,
+																																			"patternProperties": {
+																																				"^@xmlns(:\\w+)?$": {
+																																					"type": "string"
+																																				},
+																																				"^@xsi:\\w+$": {
+																																					"type": "string"
+																																				},
+																																				"^\\?\\w+$": {
+																																					"type": "string"
+																																				}
+																																			},
+																																			"properties": {
+																																				"#": {
+																																					"type": "string"
+																																				},
+																																				"PersonInfo": {
+																																					"additionalProperties": false,
+																																					"patternProperties": {
+																																						"^@xmlns(:\\w+)?$": {
+																																							"type": "string"
+																																						},
+																																						"^@xsi:\\w+$": {
+																																							"type": "string"
+																																						},
+																																						"^\\?\\w+$": {
+																																							"type": "string"
+																																						}
+																																					},
+																																					"properties": {
+																																						"#": {
+																																							"type": "string"
+																																						},
+																																						"BankAccount": {
+																																							"additionalProperties": false,
+																																							"patternProperties": {
+																																								"^@xmlns(:\\w+)?$": {
+																																									"type": "string"
+																																								},
+																																								"^@xsi:\\w+$": {
+																																									"type": "string"
+																																								},
+																																								"^\\?\\w+$": {
+																																									"type": "string"
+																																								}
+																																							},
+																																							"properties": {
+																																								"#": {
+																																									"type": "string"
+																																								},
+																																								"AmericanBankersAssociationRoutingNumber": {
+																																									"$ref": "#/definitions/xs:anyType"
+																																								}
+																																							},
+																																							"required": [
+																																								"AmericanBankersAssociationRoutingNumber"
+																																							],
+																																							"type": "object"
+																																						},
+																																						"BirthDate": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"DisabilityIndicator": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"ElectronicAddresses": {
+																																							"additionalProperties": false,
+																																							"patternProperties": {
+																																								"^@xmlns(:\\w+)?$": {
+																																									"type": "string"
+																																								},
+																																								"^@xsi:\\w+$": {
+																																									"type": "string"
+																																								},
+																																								"^\\?\\w+$": {
+																																									"type": "string"
+																																								}
+																																							},
+																																							"properties": {
+																																								"#": {
+																																									"type": "string"
+																																								},
+																																								"ElectronicAddress": {
+																																									"additionalProperties": false,
+																																									"patternProperties": {
+																																										"^@xmlns(:\\w+)?$": {
+																																											"type": "string"
+																																										},
+																																										"^@xsi:\\w+$": {
+																																											"type": "string"
+																																										},
+																																										"^\\?\\w+$": {
+																																											"type": "string"
+																																										}
+																																									},
+																																									"properties": {
+																																										"#": {
+																																											"type": "string"
+																																										},
+																																										"ElectronicAddressText": {
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"$": {
+																																													"$ref": "#/definitions/xs:string"
+																																												}
+																																											},
+																																											"type": "object"
+																																										},
+																																										"ElectronicAddressTypeCode": {
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"$": {
+																																													"$ref": "#/definitions/xs:int"
+																																												}
+																																											},
+																																											"type": "object"
+																																										}
+																																									},
+																																									"required": [
+																																										"ElectronicAddressText",
+																																										"ElectronicAddressTypeCode"
+																																									],
+																																									"type": "object"
+																																								}
+																																							},
+																																							"required": [
+																																								"ElectronicAddress"
+																																							],
+																																							"type": "object"
+																																						},
+																																						"FirstName": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"GenderCode": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"LastName": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"MiddleName": {
+																																							"anyOf": [
+																																								{
+																																									"$ref": "#/definitions/xs:anyType"
+																																								},
+																																								{
+																																									"items": {
+																																										"$ref": "#/definitions/xs:anyType"
+																																									},
+																																									"minItems": 1,
+																																									"type": "array"
+																																								}
+																																							]
+																																						},
+																																						"PersonIdentifications": {
+																																							"additionalProperties": false,
+																																							"patternProperties": {
+																																								"^@xmlns(:\\w+)?$": {
+																																									"type": "string"
+																																								},
+																																								"^@xsi:\\w+$": {
+																																									"type": "string"
+																																								},
+																																								"^\\?\\w+$": {
+																																									"type": "string"
+																																								}
+																																							},
+																																							"properties": {
+																																								"#": {
+																																									"type": "string"
+																																								},
+																																								"Identification": {
+																																									"anyOf": [
+																																										{
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"IdentificationNumberText": {
+																																													"additionalProperties": false,
+																																													"patternProperties": {
+																																														"^@xmlns(:\\w+)?$": {
+																																															"type": "string"
+																																														},
+																																														"^@xsi:\\w+$": {
+																																															"type": "string"
+																																														},
+																																														"^\\?\\w+$": {
+																																															"type": "string"
+																																														}
+																																													},
+																																													"properties": {
+																																														"#": {
+																																															"type": "string"
+																																														},
+																																														"$": {
+																																															"$ref": "#/definitions/xs:string"
+																																														}
+																																													},
+																																													"type": "object"
+																																												},
+																																												"IdentificationTypeCode": {
+																																													"additionalProperties": false,
+																																													"patternProperties": {
+																																														"^@xmlns(:\\w+)?$": {
+																																															"type": "string"
+																																														},
+																																														"^@xsi:\\w+$": {
+																																															"type": "string"
+																																														},
+																																														"^\\?\\w+$": {
+																																															"type": "string"
+																																														}
+																																													},
+																																													"properties": {
+																																														"#": {
+																																															"type": "string"
+																																														},
+																																														"$": {
+																																															"$ref": "#/definitions/xs:int"
+																																														}
+																																													},
+																																													"type": "object"
+																																												}
+																																											},
+																																											"required": [
+																																												"IdentificationNumberText",
+																																												"IdentificationTypeCode"
+																																											],
+																																											"type": "object"
+																																										},
+																																										{
+																																											"items": {
+																																												"additionalProperties": false,
+																																												"patternProperties": {
+																																													"^@xmlns(:\\w+)?$": {
+																																														"type": "string"
+																																													},
+																																													"^@xsi:\\w+$": {
+																																														"type": "string"
+																																													},
+																																													"^\\?\\w+$": {
+																																														"type": "string"
+																																													}
+																																												},
+																																												"properties": {
+																																													"#": {
+																																														"type": "string"
+																																													},
+																																													"IdentificationNumberText": {
+																																														"additionalProperties": false,
+																																														"patternProperties": {
+																																															"^@xmlns(:\\w+)?$": {
+																																																"type": "string"
+																																															},
+																																															"^@xsi:\\w+$": {
+																																																"type": "string"
+																																															},
+																																															"^\\?\\w+$": {
+																																																"type": "string"
+																																															}
+																																														},
+																																														"properties": {
+																																															"#": {
+																																																"type": "string"
+																																															},
+																																															"$": {
+																																																"$ref": "#/definitions/xs:string"
+																																															}
+																																														},
+																																														"type": "object"
+																																													},
+																																													"IdentificationTypeCode": {
+																																														"additionalProperties": false,
+																																														"patternProperties": {
+																																															"^@xmlns(:\\w+)?$": {
+																																																"type": "string"
+																																															},
+																																															"^@xsi:\\w+$": {
+																																																"type": "string"
+																																															},
+																																															"^\\?\\w+$": {
+																																																"type": "string"
+																																															}
+																																														},
+																																														"properties": {
+																																															"#": {
+																																																"type": "string"
+																																															},
+																																															"$": {
+																																																"$ref": "#/definitions/xs:int"
+																																															}
+																																														},
+																																														"type": "object"
+																																													}
+																																												},
+																																												"required": [
+																																													"IdentificationNumberText",
+																																													"IdentificationTypeCode"
+																																												],
+																																												"type": "object"
+																																											},
+																																											"minItems": 1,
+																																											"type": "array"
+																																										}
+																																									]
+																																								}
+																																							},
+																																							"required": [
+																																								"Identification"
+																																							],
+																																							"type": "object"
+																																						},
+																																						"Phones": {
+																																							"additionalProperties": false,
+																																							"patternProperties": {
+																																								"^@xmlns(:\\w+)?$": {
+																																									"type": "string"
+																																								},
+																																								"^@xsi:\\w+$": {
+																																									"type": "string"
+																																								},
+																																								"^\\?\\w+$": {
+																																									"type": "string"
+																																								}
+																																							},
+																																							"properties": {
+																																								"#": {
+																																									"type": "string"
+																																								},
+																																								"Phone": {
+																																									"anyOf": [
+																																										{
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"PhoneNumberText": {
+																																													"$ref": "#/definitions/xs:anyType"
+																																												},
+																																												"PhoneTypeCode": {
+																																													"additionalProperties": false,
+																																													"patternProperties": {
+																																														"^@xmlns(:\\w+)?$": {
+																																															"type": "string"
+																																														},
+																																														"^@xsi:\\w+$": {
+																																															"type": "string"
+																																														},
+																																														"^\\?\\w+$": {
+																																															"type": "string"
+																																														}
+																																													},
+																																													"properties": {
+																																														"#": {
+																																															"type": "string"
+																																														},
+																																														"$": {
+																																															"$ref": "#/definitions/xs:int"
+																																														}
+																																													},
+																																													"type": "object"
+																																												}
+																																											},
+																																											"required": [
+																																												"PhoneNumberText",
+																																												"PhoneTypeCode"
+																																											],
+																																											"type": "object"
+																																										},
+																																										{
+																																											"items": {
+																																												"additionalProperties": false,
+																																												"patternProperties": {
+																																													"^@xmlns(:\\w+)?$": {
+																																														"type": "string"
+																																													},
+																																													"^@xsi:\\w+$": {
+																																														"type": "string"
+																																													},
+																																													"^\\?\\w+$": {
+																																														"type": "string"
+																																													}
+																																												},
+																																												"properties": {
+																																													"#": {
+																																														"type": "string"
+																																													},
+																																													"PhoneNumberText": {
+																																														"$ref": "#/definitions/xs:anyType"
+																																													},
+																																													"PhoneTypeCode": {
+																																														"additionalProperties": false,
+																																														"patternProperties": {
+																																															"^@xmlns(:\\w+)?$": {
+																																																"type": "string"
+																																															},
+																																															"^@xsi:\\w+$": {
+																																																"type": "string"
+																																															},
+																																															"^\\?\\w+$": {
+																																																"type": "string"
+																																															}
+																																														},
+																																														"properties": {
+																																															"#": {
+																																																"type": "string"
+																																															},
+																																															"$": {
+																																																"$ref": "#/definitions/xs:int"
+																																															}
+																																														},
+																																														"type": "object"
+																																													}
+																																												},
+																																												"required": [
+																																													"PhoneNumberText",
+																																													"PhoneTypeCode"
+																																												],
+																																												"type": "object"
+																																											},
+																																											"minItems": 1,
+																																											"type": "array"
+																																										}
+																																									]
+																																								}
+																																							},
+																																							"required": [
+																																								"Phone"
+																																							],
+																																							"type": "object"
+																																						},
+																																						"PostalAddresses": {
+																																							"additionalProperties": false,
+																																							"patternProperties": {
+																																								"^@xmlns(:\\w+)?$": {
+																																									"type": "string"
+																																								},
+																																								"^@xsi:\\w+$": {
+																																									"type": "string"
+																																								},
+																																								"^\\?\\w+$": {
+																																									"type": "string"
+																																								}
+																																							},
+																																							"properties": {
+																																								"#": {
+																																									"type": "string"
+																																								},
+																																								"PostalAddress": {
+																																									"anyOf": [
+																																										{
+																																											"additionalProperties": false,
+																																											"patternProperties": {
+																																												"^@xmlns(:\\w+)?$": {
+																																													"type": "string"
+																																												},
+																																												"^@xsi:\\w+$": {
+																																													"type": "string"
+																																												},
+																																												"^\\?\\w+$": {
+																																													"type": "string"
+																																												}
+																																											},
+																																											"properties": {
+																																												"#": {
+																																													"type": "string"
+																																												},
+																																												"AddressTypeCode": {
+																																													"additionalProperties": false,
+																																													"patternProperties": {
+																																														"^@xmlns(:\\w+)?$": {
+																																															"type": "string"
+																																														},
+																																														"^@xsi:\\w+$": {
+																																															"type": "string"
+																																														},
+																																														"^\\?\\w+$": {
+																																															"type": "string"
+																																														}
+																																													},
+																																													"properties": {
+																																														"#": {
+																																															"type": "string"
+																																														},
+																																														"$": {
+																																															"$ref": "#/definitions/xs:int"
+																																														}
+																																													},
+																																													"type": "object"
+																																												},
+																																												"CityName": {
+																																													"$ref": "#/definitions/xs:anyType"
+																																												},
+																																												"CountryCode": {
+																																													"$ref": "#/definitions/xs:anyType"
+																																												},
+																																												"FirstLineAddress": {
+																																													"$ref": "#/definitions/xs:anyType"
+																																												},
+																																												"PostalCode": {
+																																													"$ref": "#/definitions/xs:anyType"
+																																												},
+																																												"SecondLineAddress": {
+																																													"$ref": "#/definitions/xs:anyType"
+																																												},
+																																												"StateProvinceCode": {
+																																													"$ref": "#/definitions/xs:anyType"
+																																												},
+																																												"ThirdLineAddress": {
+																																													"$ref": "#/definitions/xs:anyType"
+																																												}
+																																											},
+																																											"required": [
+																																												"AddressTypeCode",
+																																												"CityName",
+																																												"CountryCode",
+																																												"FirstLineAddress",
+																																												"PostalCode",
+																																												"SecondLineAddress",
+																																												"StateProvinceCode",
+																																												"ThirdLineAddress"
+																																											],
+																																											"type": "object"
+																																										},
+																																										{
+																																											"items": {
+																																												"additionalProperties": false,
+																																												"patternProperties": {
+																																													"^@xmlns(:\\w+)?$": {
+																																														"type": "string"
+																																													},
+																																													"^@xsi:\\w+$": {
+																																														"type": "string"
+																																													},
+																																													"^\\?\\w+$": {
+																																														"type": "string"
+																																													}
+																																												},
+																																												"properties": {
+																																													"#": {
+																																														"type": "string"
+																																													},
+																																													"AddressTypeCode": {
+																																														"additionalProperties": false,
+																																														"patternProperties": {
+																																															"^@xmlns(:\\w+)?$": {
+																																																"type": "string"
+																																															},
+																																															"^@xsi:\\w+$": {
+																																																"type": "string"
+																																															},
+																																															"^\\?\\w+$": {
+																																																"type": "string"
+																																															}
+																																														},
+																																														"properties": {
+																																															"#": {
+																																																"type": "string"
+																																															},
+																																															"$": {
+																																																"$ref": "#/definitions/xs:int"
+																																															}
+																																														},
+																																														"type": "object"
+																																													},
+																																													"CityName": {
+																																														"$ref": "#/definitions/xs:anyType"
+																																													},
+																																													"CountryCode": {
+																																														"$ref": "#/definitions/xs:anyType"
+																																													},
+																																													"FirstLineAddress": {
+																																														"$ref": "#/definitions/xs:anyType"
+																																													},
+																																													"PostalCode": {
+																																														"$ref": "#/definitions/xs:anyType"
+																																													},
+																																													"SecondLineAddress": {
+																																														"$ref": "#/definitions/xs:anyType"
+																																													},
+																																													"StateProvinceCode": {
+																																														"$ref": "#/definitions/xs:anyType"
+																																													},
+																																													"ThirdLineAddress": {
+																																														"$ref": "#/definitions/xs:anyType"
+																																													}
+																																												},
+																																												"required": [
+																																													"AddressTypeCode",
+																																													"CityName",
+																																													"CountryCode",
+																																													"FirstLineAddress",
+																																													"PostalCode",
+																																													"SecondLineAddress",
+																																													"StateProvinceCode",
+																																													"ThirdLineAddress"
+																																												],
+																																												"type": "object"
+																																											},
+																																											"minItems": 1,
+																																											"type": "array"
+																																										}
+																																									]
+																																								}
+																																							},
+																																							"required": [
+																																								"PostalAddress"
+																																							],
+																																							"type": "object"
+																																						},
+																																						"PrefixCode": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"RelationshipTypeCode": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"StudentStatusCode": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						},
+																																						"SuffixCode": {
+																																							"$ref": "#/definitions/xs:anyType"
+																																						}
+																																					},
+																																					"required": [
+																																						"BankAccount",
+																																						"BirthDate",
+																																						"DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber",
+																																						"DisabilityIndicator",
+																																						"ElectronicAddresses",
+																																						"FirstName",
+																																						"GenderCode",
+																																						"LastName",
+																																						"MiddleName",
+																																						"PersonIdentifications",
+																																						"Phones",
+																																						"PostalAddresses",
+																																						"PrefixCode",
+																																						"RelationshipTypeCode",
+																																						"StudentStatusCode",
+																																						"SuffixCode"
+																																					],
+																																					"type": "object"
+																																				}
+																																			},
+																																			"required": [
+																																				"PersonInfo"
+																																			],
+																																			"type": "object"
+																																		}
+																																	},
+																																	"required": [
+																																		"Dependent"
+																																	],
+																																	"type": "object"
+																																},
+																																"OriginalCoverageEffectiveDate": {
+																																	"$ref": "#/definitions/xs:anyType"
+																																},
+																																"PlanCode": {
+																																	"additionalProperties": false,
+																																	"patternProperties": {
+																																		"^@xmlns(:\\w+)?$": {
+																																			"type": "string"
+																																		},
+																																		"^@xsi:\\w+$": {
+																																			"type": "string"
+																																		},
+																																		"^\\?\\w+$": {
+																																			"type": "string"
+																																		}
+																																	},
+																																	"properties": {
+																																		"#": {
+																																			"type": "string"
+																																		},
+																																		"$": {
+																																			"$ref": "#/definitions/xs:string"
+																																		}
+																																	},
+																																	"type": "object"
+																																},
+																																"PlanTypeCode": {
+																																	"additionalProperties": false,
+																																	"patternProperties": {
+																																		"^@xmlns(:\\w+)?$": {
+																																			"type": "string"
+																																		},
+																																		"^@xsi:\\w+$": {
+																																			"type": "string"
+																																		},
+																																		"^\\?\\w+$": {
+																																			"type": "string"
+																																		}
+																																	},
+																																	"properties": {
+																																		"#": {
+																																			"type": "string"
+																																		},
+																																		"$": {
+																																			"$ref": "#/definitions/xs:string"
+																																		}
+																																	},
+																																	"type": "object"
+																																},
+																																"PreTaxCode": {
+																																	"$ref": "#/definitions/xs:anyType"
+																																},
+																																"TakeoverCoverageIndicator": {
+																																	"$ref": "#/definitions/xs:anyType"
+																																},
+																																"TobaccoUseIndicator": {
+																																	"$ref": "#/definitions/xs:anyType"
+																																},
+																																"UnderwritingDecisions": {
+																																	"additionalProperties": false,
+																																	"patternProperties": {
+																																		"^@xmlns(:\\w+)?$": {
+																																			"type": "string"
+																																		},
+																																		"^@xsi:\\w+$": {
+																																			"type": "string"
+																																		},
+																																		"^\\?\\w+$": {
+																																			"type": "string"
+																																		}
+																																	},
+																																	"properties": {
+																																		"#": {
+																																			"type": "string"
+																																		},
+																																		"UnderWritingDecision": {
+																																			"additionalProperties": false,
+																																			"patternProperties": {
+																																				"^@xmlns(:\\w+)?$": {
+																																					"type": "string"
+																																				},
+																																				"^@xsi:\\w+$": {
+																																					"type": "string"
+																																				},
+																																				"^\\?\\w+$": {
+																																					"type": "string"
+																																				}
+																																			},
+																																			"properties": {
+																																				"#": {
+																																					"type": "string"
+																																				},
+																																				"UnderwrittenAmount": {
+																																					"$ref": "#/definitions/xs:anyType"
+																																				},
+																																				"UnderwrittenDecisionDate": {
+																																					"$ref": "#/definitions/xs:anyType"
+																																				},
+																																				"UnderwrittenStatusCode": {
+																																					"$ref": "#/definitions/xs:anyType"
+																																				}
+																																			},
+																																			"required": [
+																																				"UnderwrittenAmount",
+																																				"UnderwrittenDecisionDate",
+																																				"UnderwrittenStatusCode"
+																																			],
+																																			"type": "object"
+																																		}
+																																	},
+																																	"required": [
+																																		"UnderWritingDecision"
+																																	],
+																																	"type": "object"
+																																}
+																															},
+																															"required": [
+																																"Beneficiaries",
+																																"CoverageEffectiveDate",
+																																"CoverageTierCode",
+																																"Dependents",
+																																"OriginalCoverageEffectiveDate",
+																																"PlanCode",
+																																"PlanTypeCode",
+																																"PreTaxCode",
+																																"TakeoverCoverageIndicator",
+																																"TobaccoUseIndicator",
+																																"UnderwritingDecisions"
+																															],
+																															"type": "object"
+																														}
+																													},
+																													"required": [
+																														"BenefitPlanCoverage"
+																													],
+																													"type": "object"
+																												},
+																												"BenefitPlanIdentifier": {
+																													"additionalProperties": false,
+																													"patternProperties": {
+																														"^@xmlns(:\\w+)?$": {
+																															"type": "string"
+																														},
+																														"^@xsi:\\w+$": {
+																															"type": "string"
+																														},
+																														"^\\?\\w+$": {
+																															"type": "string"
+																														}
+																													},
+																													"properties": {
+																														"#": {
+																															"type": "string"
+																														},
+																														"$": {
+																															"$ref": "#/definitions/xs:string"
+																														}
+																													},
+																													"type": "object"
+																												},
+																												"BenefitTypeCode": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"EmployeeContributionCode": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"EmployeePremiumContributionAmount": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"EmployerPremiumContributionAmount": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"IssueAgeQuantity": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"PremiumModeCode": {
+																													"$ref": "#/definitions/xs:anyType"
+																												},
+																												"ProductType": {
+																													"additionalProperties": false,
+																													"patternProperties": {
+																														"^@xmlns(:\\w+)?$": {
+																															"type": "string"
+																														},
+																														"^@xsi:\\w+$": {
+																															"type": "string"
+																														},
+																														"^\\?\\w+$": {
+																															"type": "string"
+																														}
+																													},
+																													"properties": {
+																														"#": {
+																															"type": "string"
+																														},
+																														"ProductTypeCode": {
+																															"additionalProperties": false,
+																															"patternProperties": {
+																																"^@xmlns(:\\w+)?$": {
+																																	"type": "string"
+																																},
+																																"^@xsi:\\w+$": {
+																																	"type": "string"
+																																},
+																																"^\\?\\w+$": {
+																																	"type": "string"
+																																}
+																															},
+																															"properties": {
+																																"#": {
+																																	"type": "string"
+																																},
+																																"$": {
+																																	"$ref": "#/definitions/xs:int"
+																																}
+																															},
+																															"type": "object"
+																														},
+																														"ProductTypeDescriptionText": {
+																															"additionalProperties": false,
+																															"patternProperties": {
+																																"^@xmlns(:\\w+)?$": {
+																																	"type": "string"
+																																},
+																																"^@xsi:\\w+$": {
+																																	"type": "string"
+																																},
+																																"^\\?\\w+$": {
+																																	"type": "string"
+																																}
+																															},
+																															"properties": {
+																																"#": {
+																																	"type": "string"
+																																},
+																																"$": {
+																																	"$ref": "#/definitions/xs:string"
+																																}
+																															},
+																															"type": "object"
+																														}
+																													},
+																													"required": [
+																														"ProductTypeCode",
+																														"ProductTypeDescriptionText"
+																													],
+																													"type": "object"
+																												},
+																												"TotalPlanPremiumAmount": {
+																													"$ref": "#/definitions/xs:anyType"
+																												}
+																											},
+																											"required": [
+																												"BenefitApprovedAmount",
+																												"BenefitClassIdentifier",
+																												"BenefitEarningsAmount",
+																												"BenefitEarningsEffectiveDate",
+																												"BenefitEarningsModeCode",
+																												"BenefitElectedAmount",
+																												"BenefitPlanCoverages",
+																												"BenefitPlanIdentifier",
+																												"BenefitTypeCode",
+																												"EmployeeContributionCode",
+																												"EmployeePremiumContributionAmount",
+																												"EmployerPremiumContributionAmount",
+																												"IssueAgeQuantity",
+																												"PremiumModeCode",
+																												"ProductType",
+																												"TotalPlanPremiumAmount"
+																											],
+																											"type": "object"
+																										}
+																									},
+																									"required": [
+																										"BenefitPlan"
+																									],
+																									"type": "object"
+																								},
+																								"BillAccountCode": {
+																									"additionalProperties": false,
+																									"patternProperties": {
+																										"^@xmlns(:\\w+)?$": {
+																											"type": "string"
+																										},
+																										"^@xsi:\\w+$": {
+																											"type": "string"
+																										},
+																										"^\\?\\w+$": {
+																											"type": "string"
+																										}
+																									},
+																									"properties": {
+																										"#": {
+																											"type": "string"
+																										},
+																										"$": {
+																											"$ref": "#/definitions/xs:int"
+																										}
+																									},
+																									"type": "object"
+																								},
+																								"BillGroupIdentifier": {
+																									"$ref": "#/definitions/xs:anyType"
+																								},
+																								"BillSortGroupCode": {
+																									"additionalProperties": false,
+																									"patternProperties": {
+																										"^@xmlns(:\\w+)?$": {
+																											"type": "string"
+																										},
+																										"^@xsi:\\w+$": {
+																											"type": "string"
+																										},
+																										"^\\?\\w+$": {
+																											"type": "string"
+																										}
+																									},
+																									"properties": {
+																										"#": {
+																											"type": "string"
+																										},
+																										"$": {
+																											"$ref": "#/definitions/xs:int"
+																										}
+																									},
+																									"type": "object"
+																								}
+																							},
+																							"required": [
+																								"BenefitPlans",
+																								"BillAccountCode",
+																								"BillGroupIdentifier",
+																								"BillSortGroupCode"
+																							],
+																							"type": "object"
+																						}
+																					},
+																					"required": [
+																						"BillGroup"
+																					],
+																					"type": "object"
+																				},
+																				"PolicyNumber": {
+																					"additionalProperties": false,
+																					"patternProperties": {
+																						"^@xmlns(:\\w+)?$": {
+																							"type": "string"
+																						},
+																						"^@xsi:\\w+$": {
+																							"type": "string"
+																						},
+																						"^\\?\\w+$": {
+																							"type": "string"
+																						}
+																					},
+																					"properties": {
+																						"#": {
+																							"type": "string"
+																						},
+																						"$": {
+																							"$ref": "#/definitions/xs:int"
+																						}
+																					},
+																					"type": "object"
+																				}
+																			},
+																			"required": [
+																				"AgreementTypeCode",
+																				"BillGroups",
+																				"PolicyNumber"
+																			],
+																			"type": "object"
+																		}
+																	},
+																	"required": [
+																		"Agreement"
+																	],
+																	"type": "object"
+																},
+																"ComprehensiveHealthBenefitIndicator": {
+																	"$ref": "#/definitions/xs:anyType"
+																},
+																"EnrollmentMethodCode": {
+																	"$ref": "#/definitions/xs:anyType"
+																},
+																"EventDate": {
+																	"$ref": "#/definitions/xs:anyType"
+																},
+																"EventTypeCode": {
+																	"$ref": "#/definitions/xs:anyType"
+																},
+																"MedicaidEligibleCode": {
+																	"$ref": "#/definitions/xs:anyType"
+																},
+																"MinimumAnnualPayText": {
+																	"$ref": "#/definitions/xs:anyType"
+																},
+																"TemporaryDisabilityInsuranceStateCoverageText": {
+																	"$ref": "#/definitions/xs:anyType"
+																},
+																"TransactionDate": {
+																	"$ref": "#/definitions/xs:anyType"
+																},
+																"WorkersCompensationIndicator": {
+																	"$ref": "#/definitions/xs:anyType"
+																}
+															},
+															"required": [
+																"Agreements",
+																"ComprehensiveHealthBenefitIndicator",
+																"EnrollmentMethodCode",
+																"EventDate",
+																"EventTypeCode",
+																"MedicaidEligibleCode",
+																"MinimumAnnualPayText",
+																"TemporaryDisabilityInsuranceStateCoverageText",
+																"TransactionDate",
+																"WorkersCompensationIndicator"
+															],
+															"type": "object"
+														}
+													},
+													"required": [
+														"Event"
+													],
+													"type": "object"
+												},
+												"PersonInfo": {
+													"additionalProperties": false,
+													"patternProperties": {
+														"^@xmlns(:\\w+)?$": {
+															"type": "string"
+														},
+														"^@xsi:\\w+$": {
+															"type": "string"
+														},
+														"^\\?\\w+$": {
+															"type": "string"
+														}
+													},
+													"properties": {
+														"#": {
+															"type": "string"
+														},
+														"BankAccount": {
+															"additionalProperties": false,
+															"patternProperties": {
+																"^@xmlns(:\\w+)?$": {
+																	"type": "string"
+																},
+																"^@xsi:\\w+$": {
+																	"type": "string"
+																},
+																"^\\?\\w+$": {
+																	"type": "string"
+																}
+															},
+															"properties": {
+																"#": {
+																	"type": "string"
+																},
+																"AmericanBankersAssociationRoutingNumber": {
+																	"$ref": "#/definitions/xs:anyType"
+																}
+															},
+															"required": [
+																"AmericanBankersAssociationRoutingNumber"
+															],
+															"type": "object"
+														},
+														"BirthDate": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"ElectronicAddresses": {
+															"additionalProperties": false,
+															"patternProperties": {
+																"^@xmlns(:\\w+)?$": {
+																	"type": "string"
+																},
+																"^@xsi:\\w+$": {
+																	"type": "string"
+																},
+																"^\\?\\w+$": {
+																	"type": "string"
+																}
+															},
+															"properties": {
+																"#": {
+																	"type": "string"
+																},
+																"ElectronicAddress": {
+																	"anyOf": [
+																		{
+																			"additionalProperties": false,
+																			"patternProperties": {
+																				"^@xmlns(:\\w+)?$": {
+																					"type": "string"
+																				},
+																				"^@xsi:\\w+$": {
+																					"type": "string"
+																				},
+																				"^\\?\\w+$": {
+																					"type": "string"
+																				}
+																			},
+																			"properties": {
+																				"#": {
+																					"type": "string"
+																				},
+																				"ElectronicAddressText": {
+																					"additionalProperties": false,
+																					"patternProperties": {
+																						"^@xmlns(:\\w+)?$": {
+																							"type": "string"
+																						},
+																						"^@xsi:\\w+$": {
+																							"type": "string"
+																						},
+																						"^\\?\\w+$": {
+																							"type": "string"
+																						}
+																					},
+																					"properties": {
+																						"#": {
+																							"type": "string"
+																						},
+																						"$": {
+																							"$ref": "#/definitions/xs:string"
+																						}
+																					},
+																					"type": "object"
+																				},
+																				"ElectronicAddressTypeCode": {
+																					"additionalProperties": false,
+																					"patternProperties": {
+																						"^@xmlns(:\\w+)?$": {
+																							"type": "string"
+																						},
+																						"^@xsi:\\w+$": {
+																							"type": "string"
+																						},
+																						"^\\?\\w+$": {
+																							"type": "string"
+																						}
+																					},
+																					"properties": {
+																						"#": {
+																							"type": "string"
+																						},
+																						"$": {
+																							"$ref": "#/definitions/xs:int"
+																						}
+																					},
+																					"type": "object"
+																				}
+																			},
+																			"required": [
+																				"ElectronicAddressText",
+																				"ElectronicAddressTypeCode"
+																			],
+																			"type": "object"
+																		},
+																		{
+																			"items": {
+																				"additionalProperties": false,
+																				"patternProperties": {
+																					"^@xmlns(:\\w+)?$": {
+																						"type": "string"
+																					},
+																					"^@xsi:\\w+$": {
+																						"type": "string"
+																					},
+																					"^\\?\\w+$": {
+																						"type": "string"
+																					}
+																				},
+																				"properties": {
+																					"#": {
+																						"type": "string"
+																					},
+																					"ElectronicAddressText": {
+																						"additionalProperties": false,
+																						"patternProperties": {
+																							"^@xmlns(:\\w+)?$": {
+																								"type": "string"
+																							},
+																							"^@xsi:\\w+$": {
+																								"type": "string"
+																							},
+																							"^\\?\\w+$": {
+																								"type": "string"
+																							}
+																						},
+																						"properties": {
+																							"#": {
+																								"type": "string"
+																							},
+																							"$": {
+																								"$ref": "#/definitions/xs:string"
+																							}
+																						},
+																						"type": "object"
+																					},
+																					"ElectronicAddressTypeCode": {
+																						"additionalProperties": false,
+																						"patternProperties": {
+																							"^@xmlns(:\\w+)?$": {
+																								"type": "string"
+																							},
+																							"^@xsi:\\w+$": {
+																								"type": "string"
+																							},
+																							"^\\?\\w+$": {
+																								"type": "string"
+																							}
+																						},
+																						"properties": {
+																							"#": {
+																								"type": "string"
+																							},
+																							"$": {
+																								"$ref": "#/definitions/xs:int"
+																							}
+																						},
+																						"type": "object"
+																					}
+																				},
+																				"required": [
+																					"ElectronicAddressText",
+																					"ElectronicAddressTypeCode"
+																				],
+																				"type": "object"
+																			},
+																			"minItems": 1,
+																			"type": "array"
+																		}
+																	]
+																}
+															},
+															"required": [
+																"ElectronicAddress"
+															],
+															"type": "object"
+														},
+														"FirstName": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"FullName": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"GenderCode": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"LastName": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"MaritalStatusCode": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"MiddleName": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"PersonIdentifications": {
+															"additionalProperties": false,
+															"patternProperties": {
+																"^@xmlns(:\\w+)?$": {
+																	"type": "string"
+																},
+																"^@xsi:\\w+$": {
+																	"type": "string"
+																},
+																"^\\?\\w+$": {
+																	"type": "string"
+																}
+															},
+															"properties": {
+																"#": {
+																	"type": "string"
+																},
+																"Identification": {
+																	"anyOf": [
+																		{
+																			"additionalProperties": false,
+																			"patternProperties": {
+																				"^@xmlns(:\\w+)?$": {
+																					"type": "string"
+																				},
+																				"^@xsi:\\w+$": {
+																					"type": "string"
+																				},
+																				"^\\?\\w+$": {
+																					"type": "string"
+																				}
+																			},
+																			"properties": {
+																				"#": {
+																					"type": "string"
+																				},
+																				"IdentificationNumberText": {
+																					"additionalProperties": false,
+																					"patternProperties": {
+																						"^@xmlns(:\\w+)?$": {
+																							"type": "string"
+																						},
+																						"^@xsi:\\w+$": {
+																							"type": "string"
+																						},
+																						"^\\?\\w+$": {
+																							"type": "string"
+																						}
+																					},
+																					"properties": {
+																						"#": {
+																							"type": "string"
+																						},
+																						"$": {
+																							"$ref": "#/definitions/xs:string"
+																						}
+																					},
+																					"type": "object"
+																				},
+																				"IdentificationTypeCode": {
+																					"additionalProperties": false,
+																					"patternProperties": {
+																						"^@xmlns(:\\w+)?$": {
+																							"type": "string"
+																						},
+																						"^@xsi:\\w+$": {
+																							"type": "string"
+																						},
+																						"^\\?\\w+$": {
+																							"type": "string"
+																						}
+																					},
+																					"properties": {
+																						"#": {
+																							"type": "string"
+																						},
+																						"$": {
+																							"$ref": "#/definitions/xs:int"
+																						}
+																					},
+																					"type": "object"
+																				}
+																			},
+																			"required": [
+																				"IdentificationNumberText",
+																				"IdentificationTypeCode"
+																			],
+																			"type": "object"
+																		},
+																		{
+																			"items": {
+																				"additionalProperties": false,
+																				"patternProperties": {
+																					"^@xmlns(:\\w+)?$": {
+																						"type": "string"
+																					},
+																					"^@xsi:\\w+$": {
+																						"type": "string"
+																					},
+																					"^\\?\\w+$": {
+																						"type": "string"
+																					}
+																				},
+																				"properties": {
+																					"#": {
+																						"type": "string"
+																					},
+																					"IdentificationNumberText": {
+																						"additionalProperties": false,
+																						"patternProperties": {
+																							"^@xmlns(:\\w+)?$": {
+																								"type": "string"
+																							},
+																							"^@xsi:\\w+$": {
+																								"type": "string"
+																							},
+																							"^\\?\\w+$": {
+																								"type": "string"
+																							}
+																						},
+																						"properties": {
+																							"#": {
+																								"type": "string"
+																							},
+																							"$": {
+																								"$ref": "#/definitions/xs:string"
+																							}
+																						},
+																						"type": "object"
+																					},
+																					"IdentificationTypeCode": {
+																						"additionalProperties": false,
+																						"patternProperties": {
+																							"^@xmlns(:\\w+)?$": {
+																								"type": "string"
+																							},
+																							"^@xsi:\\w+$": {
+																								"type": "string"
+																							},
+																							"^\\?\\w+$": {
+																								"type": "string"
+																							}
+																						},
+																						"properties": {
+																							"#": {
+																								"type": "string"
+																							},
+																							"$": {
+																								"$ref": "#/definitions/xs:int"
+																							}
+																						},
+																						"type": "object"
+																					}
+																				},
+																				"required": [
+																					"IdentificationNumberText",
+																					"IdentificationTypeCode"
+																				],
+																				"type": "object"
+																			},
+																			"minItems": 1,
+																			"type": "array"
+																		}
+																	]
+																}
+															},
+															"required": [
+																"Identification"
+															],
+															"type": "object"
+														},
+														"Phones": {
+															"additionalProperties": false,
+															"patternProperties": {
+																"^@xmlns(:\\w+)?$": {
+																	"type": "string"
+																},
+																"^@xsi:\\w+$": {
+																	"type": "string"
+																},
+																"^\\?\\w+$": {
+																	"type": "string"
+																}
+															},
+															"properties": {
+																"#": {
+																	"type": "string"
+																},
+																"Phone": {
+																	"anyOf": [
+																		{
+																			"additionalProperties": false,
+																			"patternProperties": {
+																				"^@xmlns(:\\w+)?$": {
+																					"type": "string"
+																				},
+																				"^@xsi:\\w+$": {
+																					"type": "string"
+																				},
+																				"^\\?\\w+$": {
+																					"type": "string"
+																				}
+																			},
+																			"properties": {
+																				"#": {
+																					"type": "string"
+																				},
+																				"PhoneNumberText": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"PhoneTypeCode": {
+																					"additionalProperties": false,
+																					"patternProperties": {
+																						"^@xmlns(:\\w+)?$": {
+																							"type": "string"
+																						},
+																						"^@xsi:\\w+$": {
+																							"type": "string"
+																						},
+																						"^\\?\\w+$": {
+																							"type": "string"
+																						}
+																					},
+																					"properties": {
+																						"#": {
+																							"type": "string"
+																						},
+																						"$": {
+																							"$ref": "#/definitions/xs:int"
+																						}
+																					},
+																					"type": "object"
+																				}
+																			},
+																			"required": [
+																				"PhoneNumberText",
+																				"PhoneTypeCode"
+																			],
+																			"type": "object"
+																		},
+																		{
+																			"items": {
+																				"additionalProperties": false,
+																				"patternProperties": {
+																					"^@xmlns(:\\w+)?$": {
+																						"type": "string"
+																					},
+																					"^@xsi:\\w+$": {
+																						"type": "string"
+																					},
+																					"^\\?\\w+$": {
+																						"type": "string"
+																					}
+																				},
+																				"properties": {
+																					"#": {
+																						"type": "string"
+																					},
+																					"PhoneNumberText": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"PhoneTypeCode": {
+																						"additionalProperties": false,
+																						"patternProperties": {
+																							"^@xmlns(:\\w+)?$": {
+																								"type": "string"
+																							},
+																							"^@xsi:\\w+$": {
+																								"type": "string"
+																							},
+																							"^\\?\\w+$": {
+																								"type": "string"
+																							}
+																						},
+																						"properties": {
+																							"#": {
+																								"type": "string"
+																							},
+																							"$": {
+																								"$ref": "#/definitions/xs:int"
+																							}
+																						},
+																						"type": "object"
+																					}
+																				},
+																				"required": [
+																					"PhoneNumberText",
+																					"PhoneTypeCode"
+																				],
+																				"type": "object"
+																			},
+																			"minItems": 1,
+																			"type": "array"
+																		}
+																	]
+																}
+															},
+															"required": [
+																"Phone"
+															],
+															"type": "object"
+														},
+														"PostalAddresses": {
+															"additionalProperties": false,
+															"patternProperties": {
+																"^@xmlns(:\\w+)?$": {
+																	"type": "string"
+																},
+																"^@xsi:\\w+$": {
+																	"type": "string"
+																},
+																"^\\?\\w+$": {
+																	"type": "string"
+																}
+															},
+															"properties": {
+																"#": {
+																	"type": "string"
+																},
+																"PostalAddress": {
+																	"anyOf": [
+																		{
+																			"additionalProperties": false,
+																			"patternProperties": {
+																				"^@xmlns(:\\w+)?$": {
+																					"type": "string"
+																				},
+																				"^@xsi:\\w+$": {
+																					"type": "string"
+																				},
+																				"^\\?\\w+$": {
+																					"type": "string"
+																				}
+																			},
+																			"properties": {
+																				"#": {
+																					"type": "string"
+																				},
+																				"AddressTypeCode": {
+																					"additionalProperties": false,
+																					"patternProperties": {
+																						"^@xmlns(:\\w+)?$": {
+																							"type": "string"
+																						},
+																						"^@xsi:\\w+$": {
+																							"type": "string"
+																						},
+																						"^\\?\\w+$": {
+																							"type": "string"
+																						}
+																					},
+																					"properties": {
+																						"#": {
+																							"type": "string"
+																						},
+																						"$": {
+																							"$ref": "#/definitions/xs:int"
+																						}
+																					},
+																					"type": "object"
+																				},
+																				"CityName": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"CountryCode": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"FirstLineAddress": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"PostalCode": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"SecondLineAddress": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"StateProvinceCode": {
+																					"$ref": "#/definitions/xs:anyType"
+																				},
+																				"ThirdLineAddress": {
+																					"$ref": "#/definitions/xs:anyType"
+																				}
+																			},
+																			"required": [
+																				"AddressTypeCode",
+																				"CityName",
+																				"CountryCode",
+																				"FirstLineAddress",
+																				"PostalCode",
+																				"SecondLineAddress",
+																				"StateProvinceCode",
+																				"ThirdLineAddress"
+																			],
+																			"type": "object"
+																		},
+																		{
+																			"items": {
+																				"additionalProperties": false,
+																				"patternProperties": {
+																					"^@xmlns(:\\w+)?$": {
+																						"type": "string"
+																					},
+																					"^@xsi:\\w+$": {
+																						"type": "string"
+																					},
+																					"^\\?\\w+$": {
+																						"type": "string"
+																					}
+																				},
+																				"properties": {
+																					"#": {
+																						"type": "string"
+																					},
+																					"AddressTypeCode": {
+																						"additionalProperties": false,
+																						"patternProperties": {
+																							"^@xmlns(:\\w+)?$": {
+																								"type": "string"
+																							},
+																							"^@xsi:\\w+$": {
+																								"type": "string"
+																							},
+																							"^\\?\\w+$": {
+																								"type": "string"
+																							}
+																						},
+																						"properties": {
+																							"#": {
+																								"type": "string"
+																							},
+																							"$": {
+																								"$ref": "#/definitions/xs:int"
+																							}
+																						},
+																						"type": "object"
+																					},
+																					"CityName": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"CountryCode": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"FirstLineAddress": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"PostalCode": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"SecondLineAddress": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"StateProvinceCode": {
+																						"$ref": "#/definitions/xs:anyType"
+																					},
+																					"ThirdLineAddress": {
+																						"$ref": "#/definitions/xs:anyType"
+																					}
+																				},
+																				"required": [
+																					"AddressTypeCode",
+																					"CityName",
+																					"CountryCode",
+																					"FirstLineAddress",
+																					"PostalCode",
+																					"SecondLineAddress",
+																					"StateProvinceCode",
+																					"ThirdLineAddress"
+																				],
+																				"type": "object"
+																			},
+																			"minItems": 1,
+																			"type": "array"
+																		}
+																	]
+																}
+															},
+															"required": [
+																"PostalAddress"
+															],
+															"type": "object"
+														},
+														"PrefixCode": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"SuffixCode": {
+															"$ref": "#/definitions/xs:anyType"
+														}
+													},
+													"required": [
+														"BankAccount",
+														"BirthDate",
+														"DentalHealthMaintenanceOrganizationPrimaryHealthPhysicianNumber",
+														"ElectronicAddresses",
+														"FirstName",
+														"FullName",
+														"GenderCode",
+														"LastName",
+														"MaritalStatusCode",
+														"MiddleName",
+														"PersonIdentifications",
+														"Phones",
+														"PostalAddresses",
+														"PrefixCode",
+														"SuffixCode"
+													],
+													"type": "object"
+												},
+												"PersonTypeCode": {
+													"$ref": "#/definitions/xs:anyType"
+												}
+											},
+											"required": [
+												"EmploymentInfo",
+												"Events",
+												"PersonInfo",
+												"PersonTypeCode"
+											],
+											"type": "object"
+										}
+									},
+									"required": [
+										"Person"
+									],
+									"type": "object"
+								},
+								"Phones": {
+									"additionalProperties": false,
+									"patternProperties": {
+										"^@xmlns(:\\w+)?$": {
+											"type": "string"
+										},
+										"^@xsi:\\w+$": {
+											"type": "string"
+										},
+										"^\\?\\w+$": {
+											"type": "string"
+										}
+									},
+									"properties": {
+										"#": {
+											"type": "string"
+										},
+										"Phone": {
+											"anyOf": [
+												{
+													"additionalProperties": false,
+													"patternProperties": {
+														"^@xmlns(:\\w+)?$": {
+															"type": "string"
+														},
+														"^@xsi:\\w+$": {
+															"type": "string"
+														},
+														"^\\?\\w+$": {
+															"type": "string"
+														}
+													},
+													"properties": {
+														"#": {
+															"type": "string"
+														},
+														"PhoneNumberText": {
+															"$ref": "#/definitions/xs:anyType"
+														},
+														"PhoneTypeCode": {
+															"additionalProperties": false,
+															"patternProperties": {
+																"^@xmlns(:\\w+)?$": {
+																	"type": "string"
+																},
+																"^@xsi:\\w+$": {
+																	"type": "string"
+																},
+																"^\\?\\w+$": {
+																	"type": "string"
+																}
+															},
+															"properties": {
+																"#": {
+																	"type": "string"
+																},
+																"$": {
+																	"$ref": "#/definitions/xs:int"
+																}
+															},
+															"type": "object"
+														}
+													},
+													"required": [
+														"PhoneNumberText",
+														"PhoneTypeCode"
+													],
+													"type": "object"
+												},
+												{
+													"items": {
+														"additionalProperties": false,
+														"patternProperties": {
+															"^@xmlns(:\\w+)?$": {
+																"type": "string"
+															},
+															"^@xsi:\\w+$": {
+																"type": "string"
+															},
+															"^\\?\\w+$": {
+																"type": "string"
+															}
+														},
+														"properties": {
+															"#": {
+																"type": "string"
+															},
+															"PhoneNumberText": {
+																"$ref": "#/definitions/xs:anyType"
+															},
+															"PhoneTypeCode": {
+																"additionalProperties": false,
+																"patternProperties": {
+																	"^@xmlns(:\\w+)?$": {
+																		"type": "string"
+																	},
+																	"^@xsi:\\w+$": {
+																		"type": "string"
+																	},
+																	"^\\?\\w+$": {
+																		"type": "string"
+																	}
+																},
+																"properties": {
+																	"#": {
+																		"type": "string"
+																	},
+																	"$": {
+																		"$ref": "#/definitions/xs:int"
+																	}
+																},
+																"type": "object"
+															}
+														},
+														"required": [
+															"PhoneNumberText",
+															"PhoneTypeCode"
+														],
+														"type": "object"
+													},
+													"minItems": 1,
+													"type": "array"
+												}
+											]
+										}
+									},
+									"required": [
+										"Phone"
+									],
+									"type": "object"
+								},
+								"PostalAddress": {
+									"additionalProperties": false,
+									"patternProperties": {
+										"^@xmlns(:\\w+)?$": {
+											"type": "string"
+										},
+										"^@xsi:\\w+$": {
+											"type": "string"
+										},
+										"^\\?\\w+$": {
+											"type": "string"
+										}
+									},
+									"properties": {
+										"#": {
+											"type": "string"
+										},
+										"AddressTypeCode": {
+											"$ref": "#/definitions/xs:anyType"
+										},
+										"CityName": {
+											"$ref": "#/definitions/xs:anyType"
+										},
+										"CountryCode": {
+											"$ref": "#/definitions/xs:anyType"
+										},
+										"FirstLineAddress": {
+											"$ref": "#/definitions/xs:anyType"
+										},
+										"PostalCode": {
+											"$ref": "#/definitions/xs:anyType"
+										},
+										"SecondLineAddress": {
+											"$ref": "#/definitions/xs:anyType"
+										},
+										"StateProvinceCode": {
+											"$ref": "#/definitions/xs:anyType"
+										},
+										"ThirdLineAddress": {
+											"$ref": "#/definitions/xs:anyType"
+										}
+									},
+									"required": [
+										"AddressTypeCode",
+										"CityName",
+										"CountryCode",
+										"FirstLineAddress",
+										"PostalCode",
+										"SecondLineAddress",
+										"StateProvinceCode",
+										"ThirdLineAddress"
+									],
+									"type": "object"
+								}
+							},
+							"required": [
+								"ElectronicAddress",
+								"FullName",
+								"Identification",
+								"OrganizationTypeCode",
+								"Persons",
+								"Phones",
+								"PostalAddress"
+							],
+							"type": "object"
+						},
+						"SystemVersionIdentifier": {
+							"$ref": "#/definitions/xs:anyType"
+						},
+						"TestProductionCode": {
+							"$ref": "#/definitions/xs:anyType"
+						},
+						"TotalRecordsQuantity": {
+							"$ref": "#/definitions/xs:anyType"
+						}
+					},
+					"required": [
+						"EnrollmentPartnerIdentifier",
+						"EnrollmentPartnerName",
+						"FileCreationDate",
+						"FileCreationTime",
+						"FileLayoutVersionIdentifier",
+						"FileTypeCode",
+						"InsuranceCarrierIdentifier",
+						"InsuranceCarrierName",
+						"Organisation",
+						"SystemVersionIdentifier",
+						"TestProductionCode",
+						"TotalRecordsQuantity"
+					],
+					"type": "object"
+				}
+			},
+			"required": [
+				"APIKey",
+				"Audit"
+			],
+			"type": "object"
+		},
+		"xs:anyType": {
+			"additionalProperties": false,
+			"patternProperties": {
+				"^@\\w+$": {
+					"type": [
+						"string",
+						"number",
+						"boolean"
+					]
+				},
+				"^@xmlns(:\\w+)?$": {
+					"type": "string"
+				},
+				"^@xsi:\\w+$": {
+					"type": "string"
+				},
+				"^\\?\\w+$": {
+					"type": "string"
+				},
+				"^\\w+$": {
+				}
+			},
+			"properties": {
+				"#": {
+					"type": "string"
+				},
+				"$": {
+					"type": "string"
+				}
+			},
+			"type": "object"
+		},
+		"xs:int": {
+			"maximum": 2147483647,
+			"minimum": -2147483648,
+			"type": "integer"
+		},
+		"xs:string": {
+			"type": "string"
+		}
+	},
+	"description": "JSON Schema generated by XMLSpy v2018 sp1 (x64) (http://www.altova.com)",
+	"patternProperties": {
+		"^\\?\\w+$": {
+			"type": "string"
+		}
+	},
+	"properties": {
+		"#": {
+			"type": "string"
+		},
+		"@xmlns:xs": {
+			"default": "http://www.w3.org/2001/XMLSchema"
+		},
+		"LimraRoot": {
+			"$ref": "#/definitions/.LimraRoot"
+		}
+	},
+	"type": "object"
+}
